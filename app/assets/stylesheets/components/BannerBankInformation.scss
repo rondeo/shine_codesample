@@ -1,0 +1,48 @@
+.bannerBankInformation {
+  padding: 1.4rem 16% 1.4rem 16%;
+  text-align: center;
+  background-color: $mango;
+  cursor: pointer;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  line-height: 1.6rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include media("<phone") {
+  }
+
+  &__notification {
+    height: 1.4rem;
+    width: 1.4rem;
+    fill: #222;
+    margin-right: 6px;
+
+    @include media("<phone") {
+      height: 21px;
+      width: 21px;
+    }
+  }
+
+  &__close {
+    justify-self: flex-end;
+    z-index: 11;
+
+    height: 21px;
+    width: 21px;
+    fill: #fff;
+    position: absolute;
+    right: 4%;
+
+    @include media("<phone") {
+    }
+  }
+
+  &--hidden {
+    display: none;
+  }
+}

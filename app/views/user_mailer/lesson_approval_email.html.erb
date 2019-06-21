@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+
+  <body>
+    <h1>Hi <%= @learner.first_name %>,</h1>
+
+    <p>
+      <%= @tutor.name %> has just submitted a new lesson for you. Here are the details:
+    </p>
+
+    <p>
+      <blockquote>
+	Lesson Date: <%= @lesson.lesson_date.strftime("%B %-d, %Y") %><br/>
+	Lesson Subject: <%= @lesson.subject %><br/>
+	Lesson Length: <%= @lesson.duration_in_mins %><br/>
+	Lesson Summary:
+	<br />
+	<br />
+	<%= @lesson.summary %>
+      </blockquote>
+    </p>
+
+    <p>
+      Please <a href="<%= @lesson_url %>">click here</a> to view and approve this lesson and release payment to <%= @tutor.first_name %>.
+    </p>
+
+    <p>Please note: if you find you've approved a lesson by mistake and would like to request a refund, please contact us directly at info@shinetutors.co.</p>
+  </body>
+</html>

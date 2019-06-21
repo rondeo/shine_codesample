@@ -1,0 +1,90 @@
+.page-reference {
+
+  width: 100%;
+  height: calc(100vh - 70px); // ensure full height when form is <100% of page
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(/images/application-header-1800.jpg);
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  .reference-panel {
+    margin-top: -21px;
+    //margin: auto 10%;
+    //height: 80%;
+    width: 37%;
+
+    .panel__title {
+    }
+    .panel__title-content {
+      padding: 0;
+    }
+    .panel__title__header {
+      padding: 18px 0 0;
+    }
+    .panel__content {
+      padding-top: 12px;
+      padding-bottom: 0;
+    }
+
+    .form-tutor-reference {
+      padding: 5%;
+      text-align: center;
+    }
+
+    .input--textarea {
+      max-height: 90px;
+    }
+
+    .form-container {
+      position: relative;
+      grid-template-columns: 30%;
+      grid-gap: 24px;
+    }
+
+    .submit-reference {
+      margin-top: 36px;
+      letter-spacing: 1.0px;
+      font-size: .8rem;
+    }
+  }
+
+  .reference-text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    padding-bottom: 2px;
+
+    &__image {
+    }
+    &__button {
+      display: flex;
+      flex-flow: column nowrap;
+
+      font-size: 0.8rem;
+    }
+  }
+
+  .panel--set-password {
+    .panel__content {
+      padding-top: 8px;
+    }
+
+    .form-set-password {
+      &__subtitle {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}

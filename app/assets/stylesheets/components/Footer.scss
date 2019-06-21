@@ -1,0 +1,98 @@
+// footer [styles]
+
+.footer {
+  position: relative;
+  background: $dark-grey;
+  &__logo {
+    grid-column: 1 / span 6;
+    img {
+      max-width: 270px;
+    }
+    @include media("<=tablet") {
+      grid-column: 1 / span 6;
+    }
+  }
+  &__content {
+    padding-top: 74px;
+    padding-bottom: 7px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: baseline;
+    grid-gap: 38px 30px;
+  }
+  &__copyright {
+    grid-column: 1 / span 6;
+    color: $c-white;
+    padding: 30px 0;
+    border-top: 1px solid rgba($c-white, 0.1);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include media("<=tablet") {
+      grid-column: 1 / span 6;
+    }
+    @include media("<=phone") {
+      font-size: em(12);
+    }
+  }
+  &__text {
+    grid-column: 1 / span 2;
+    color: $c-white;
+    font-size: em(14);
+    line-height: 2em;
+    font-weight: 300;
+    @include media("<=tablet") {
+      grid-column: 1 / span 6;
+    }
+  }
+  &__navbar {
+    &--1 {
+      grid-column: 4 / span 1;
+      @include media("<=tablet") {
+        grid-column: 1 / span 3;
+      }
+    }
+    &--2 {
+      grid-column: 5 / span 1;
+      @include media("<=tablet") {
+        grid-column: 4 / span 3;
+      }
+    }
+    &--3 {
+      grid-column: 6 / span 1;
+      @include media("<=tablet") {
+        grid-column: 1 / span 3;
+      }
+    }
+  }
+
+  .footer-navbar {
+    position: relative;
+
+    &__title {
+      font-size: em(18);
+      font-weight: 700;
+      color: $c-white;
+      line-height: 3em;
+    }
+    &__navbar {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__item {
+      display: block;
+      line-height: 2.3em;
+      font-size: em(14);
+      font-weight: 300;
+      color: $c-white;
+      transition: $t-normal;
+      &:hover {
+        color: $mango;
+      }
+    }
+  }
+}
+
+// Created by dimasion 2018-10-4

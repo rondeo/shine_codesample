@@ -1,0 +1,7 @@
+en:
+  devise_token_auth:
+    sessions:
+      teacher_not_confirmed: "Your application is still under review! We will contact you via email when your application is approved."
+      student_not_confirmed: "We're working on a great match for you! Please look out for a phone call or email from us."
+      not_confirmed: "A message to confirm your account has been sent to the email on file. Please click the link to confirm your account and log in."
+      inactive: "Your account is not activated yet."

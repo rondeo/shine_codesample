@@ -1,0 +1,39 @@
+// section-head [styles]
+
+.section-head {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 520px;
+  //padding-top: 54px;
+  color: $c-white;
+  background-color: #ddd;
+  @include backgroundCoverCenter;
+  background-position: 30% center;
+  @include media("<=laptop") {
+    height: 400px;
+  }
+  &--large {
+    height: 881px;
+    //padding-bottom: 395px;
+    @include media("<=tablet") {
+      height: 400px;
+      padding-bottom: 0;
+    }
+    @include media("<=phone") {
+      height: 300px;
+    }
+  }
+
+  &--relativeHeight {
+    //height: 100%;
+
+  }
+
+  &__title {
+    position: relative;
+    top: 160px;
+    text-align: center;
+  }
+
+}

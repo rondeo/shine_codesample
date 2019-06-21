@@ -1,0 +1,82 @@
+// comment [styles]
+
+.comment {
+  position: relative;
+  max-width: 480px;
+  padding: 2px 0;
+  box-shadow: 0 0 24.6px 5.4px rgba(204, 223, 210, 0.3);
+  @include media("<=tablet") {
+    max-width: 480px;
+  }
+  @include media("<=phone") {
+    max-width: 480px;
+    padding: 18px 0 0;
+    border: none;
+    box-shadow: none;
+  }
+  &__quote {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: $mango;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 25px;
+    left: 24px;
+    border-radius: 4px;
+    @include media("<=tablet") {
+      width: 45px;
+      top: 0;
+      left: calc(50% - 20px);
+      height: 45px;
+    }
+    svg {
+      fill: $c-white;
+      width: 30px;
+      height: 30px;
+      @include media("<=tablet") {
+        height: 22px;
+        width: 22px;
+      }
+    }
+  }
+  &__content {
+    padding: 50px 98px 50px 113px;
+    //min-height: 482px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    @include media("<=tablet") {
+      padding: 55px 55px 15px;
+      text-align: center;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+  }
+  &__text {
+    font-size: em(18);
+    font-weight: 300;
+    line-height: 1.5em;
+    color: $bluey-grey;
+    height: 220px;
+    overflow-y: hidden;
+    @include media("<=tablet") {
+      font-size: em(14);
+    }
+  }
+  &__signature {
+    height: 69px;
+  }
+  &__line {
+    height: 1px;
+    width: 70px;
+    background: $mango;
+    margin: 25px 0;
+  }
+  &__author {
+    font-weight: 700;
+  }
+}

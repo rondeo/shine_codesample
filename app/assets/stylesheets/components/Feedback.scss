@@ -1,0 +1,33 @@
+// feedback [styles]
+
+.feedback {
+  position: relative;
+  line-height: 1.5em;
+  &__title{
+    font-weight: bold;
+    font-size: em(18);
+    padding-bottom: 20px;
+  }
+
+  &__subtitle{
+    display: flex;
+    padding-bottom: 15px;
+
+    &-stars{
+      padding-right: 10px;
+    }
+
+    &-number{
+      font-weight: bold;
+      padding-right: 10px;
+    }
+
+    &-date{
+      color: $bluey-grey;
+    }
+  }
+
+  &__text{
+    color: $bluey-grey;
+  }
+}

@@ -1,0 +1,54 @@
+// group-account-panel [styles]
+
+.group-account-panel {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  &--perLineTwo {
+    .group-account-panel--item {
+      width: 48%;
+      margin-right: 2%;
+    }
+  }
+  &--perLineThree {
+    .group-account-panel--item {
+      width: 33%;
+    }
+  }
+  &--perLineFour {
+    .group-account-panel--item {
+      width: 25%;
+    }
+  }
+
+  &--item {
+    width: 100%;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &--bordered {
+    .group-account-panel--item {
+      border-bottom: 1px solid $pale-grey-two;
+      padding-bottom: 15px;
+      &:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+  }
+
+  &--mod{
+    .group-account-panel--item{
+      margin-bottom: 15px;
+
+      &:last-child {
+      }
+    }
+  }
+}

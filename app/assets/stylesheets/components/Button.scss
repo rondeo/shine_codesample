@@ -1,0 +1,311 @@
+// button [styles]
+
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  padding: 5px 40px;
+  color: $bluey-grey;
+  border-radius: 25px;
+  font-size: em(14);
+  border: 1px solid $bluey-grey;
+  transition: $t-normal;
+  text-transform: uppercase;
+  min-height: 48px;
+  height: 100%;
+
+  &__text {
+    letter-spacing: 0.4px;
+  }
+
+  &__icon {
+    display: flex;
+    margin-right: 5px;
+    margin-top: -2px;
+    svg {
+      width: 15px;
+      height: 15px;
+      transition: $t-normal;
+    }
+  }
+  @include media("<=tablet") {
+    min-height: 40px;
+    padding: 0 30px;
+    font-size: em(13);
+  }
+
+  &:hover {
+    background: $charcoal-grey;
+    border-color: $charcoal-grey;
+    color: $c-white;
+    .button__icon {
+      svg {
+        fill: $c-white;
+      }
+    }
+    &.button--no-hover{
+      color: $bluey-grey;
+      border-color: $bluey-grey;
+      background: transparent;
+    }
+  }
+  &--big {
+    min-height: 60px;
+    @include media("<=tablet") {
+      min-height: 50px;
+    }
+  }
+  &--orange {
+    background: $mango;
+    border-color: $mango;
+    color: $c-white;
+
+    &:hover {
+      background: $mango-two;
+      border-color: $mango-two;
+
+      &.button--no-hover{
+        color: $c-white;
+        border-color: $mango;
+        background: $mango;
+      }
+    }
+  }
+
+  &--dark {
+    color: $charcoal-grey;
+    border: 1px solid $charcoal-grey;
+    font-size: em(13);
+  }
+
+  &--steel {
+    background: $steel;
+    border-color: $steel;
+    color: $c-white;
+    .button__icon {
+      svg {
+        fill: $c-white;
+      }
+    }
+    &:hover {
+      border-color: $charcoal-grey;
+
+      &.button--no-hover{
+        color: $c-white;
+        border-color: $steel;
+        background: $steel;
+      }
+    }
+  }
+  &--grey {
+    background: $c-button-grey;
+    border-color: $c-button-grey;
+    color: $bluey-grey;
+    .button-icon svg {
+      fill: $bluey-grey;
+    }
+    &:hover {
+      //background: $c-button-grey-two;
+      background: $c-button-grey;
+      border-color: $c-button-grey;
+      color: #676767;
+      .button__text {
+        //font-size: 1.0rem;
+      }
+
+      &.button--no-hover{
+        background: $c-button-grey;
+        border-color: $c-button-grey;
+        color: $bluey-grey-two;
+      }
+    }
+  }
+
+  &--radius {
+    border-radius: 3px;
+    text-align: center;
+    text-transform: none;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  &--blue {
+    background: $facebook;
+    border: none;
+    color: $c-white;
+
+    &:hover{
+      background: $black;
+    }
+
+    .button__icon {
+      svg {
+        fill: $c-white;
+      }
+    }
+  }
+
+  &--red {
+    background: $rusty-red;
+    border: none;
+    color: $c-white;
+    .button__icon {
+      svg {
+        fill: $c-white;
+      }
+    }
+
+    &:hover{
+      background: $black;
+
+      &.button--no-hover{
+        color: $c-white;
+        border-color: $rusty-red;
+        background: $rusty-red;
+      }
+    }
+  }
+
+  &--redGmail {
+    background: $gmail;
+    border: none;
+    color: $c-white;
+    .button__icon {
+      svg {
+        fill: $c-white;
+      }
+    }
+
+    &:hover{
+      background: $black;
+
+      &.button--no-hover{
+        color: $c-white;
+        border-color: $gmail;
+        background: $gmail;
+      }
+    }
+  }
+
+  &--green {
+    background: $green;
+    border: none;
+    color: $c-white;
+
+    .button__icon {
+      svg {
+        fill: $c-white;
+      }
+    }
+
+    &:hover{
+      background: $black;
+
+      &.button--no-hover{
+        color: $c-white;
+        border-color: $green;
+        background: $green;
+      }
+    }
+  }
+
+  &--small{
+    min-height: 32px;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-transform: none;
+  }
+
+  &--mod{
+    max-width: 180px;
+    min-width: 180px;
+    font-size: em(14);
+    padding: 10px 30px;
+    text-align: center;
+    line-height: 1.1em;
+  }
+
+  &--text-transform{
+    text-transform: uppercase;
+  }
+
+  &--square {
+    border-radius: 0;
+  }
+
+  &--disabled {
+    background-color: $steel;
+    border-color: $steel;
+    color: $c-white;
+    cursor: auto;
+    opacity: .9;
+
+    &:hover {
+      background-color: $steel;
+      border-color: $steel;
+    }
+  }
+
+  &--big-width{
+    width: 250px;
+    @include media("<=phone") {
+      width: 100%;
+    }
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &--transparent{
+    background-color: transparent;
+    border: none;
+    color: $steel-two;
+    .button__icon {
+      svg {
+        fill: $steel-two;
+      }
+    }
+
+    &:hover{
+      background-color: transparent;
+      color: $mango;
+      .button__icon {
+        svg {
+          fill: $mango;
+        }
+      }
+    }
+  }
+
+  &--no-border {
+    border: none;
+  }
+
+  &--hover-mango {
+    border: none;
+    background-color: transparent;
+    color: $steel-two;
+    .button__icon {
+      svg {
+        fill: $steel-two;
+      }
+    }
+
+    &:hover {
+      background-color: $mango;
+      .button__icon {
+        svg {
+          fill: $white;
+        }
+      }
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

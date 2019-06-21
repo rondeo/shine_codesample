@@ -1,0 +1,28 @@
+// overrides for ReactDates calendar component
+// - https://github.com/airbnb/react-dates#overriding-styles
+
+.SingleDatePickerInput {
+  // styles referenced in Input.scss, see there
+
+  input {
+    font-family: museo-sans, sans-serif;
+    border-bottom: none;
+    font-size: em(15);
+    font-weight: 300;
+    color: $steel;
+    letter-spacing: 0.5px;
+
+    &::placeholder {
+      color: $bluey-grey;
+      font-weight: 300;
+      letter-spacing: 0.1px;
+    }
+    &:focus {
+      border-color: $steel;
+    }
+  }
+}
+
+.SingleDatePickerInput__withBorder {
+  border: 1px solid $pinkish-grey;
+}

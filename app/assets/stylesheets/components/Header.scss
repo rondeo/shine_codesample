@@ -1,0 +1,257 @@
+// header [styles]
+
+.header {
+  position: sticky;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  z-index: 22;
+  transition: $t-normal;
+  border-bottom: 1px solid transparent;
+  letter-spacing: .6px;
+
+  &__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 20px 80px;
+    transition: $t-normal;
+    z-index: 10;
+    max-width: 1821px;
+    width: 100%;
+    @include media("<=desktop") {
+      height: 60px;
+    }
+
+    &.background--dark {
+      background: #fff;
+      padding: 20px 80px;
+    }
+  }
+
+  &__navbar{
+    @include media("<=desktop") {
+      order: 3;
+    }
+  }
+
+  &__profile {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    z-index: 101;
+    top: 0;
+    right: 30px;
+    margin-left: 9px;
+    @include media("<=laptop") {
+      right: 30px;
+    }
+    @include media("<=desktop") {
+      right: 40px;
+    }
+  }
+
+  &__logo {
+    display: inline-flex;
+    align-items: center;
+    img {
+      max-width: 185px;
+      @include media("<=screen") {
+        max-width: 140px;
+      }
+      @include media("<=phone") {
+        max-width: 120px;
+      }
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    order: 3;
+    @include media("<=desktop") {
+      display: inline-flex;
+      cursor: pointer;
+      svg {
+        width: 20px;
+        height: 20px;
+        transition: $t-normal;
+        &:hover {
+          fill: $mango;
+        }
+      }
+    }
+  }
+  // hide hamburger on phone when logged-in (overlaps w login menu)
+  // - TODO: profile dropdown actually just needs to become the hamburger on mobile
+  &.header--logged .header__hamburger {
+    @include media("<=phone") {
+      display: none;
+    }
+  }
+
+  // SEARCH BAR
+  // &__search-bar {
+  //   position: relative;
+  //   margin-left: 15px;
+  //   z-index: 100;
+  //   @include media("<=desktop") {
+  //     margin-left: 0px;
+  //   }
+  // }
+
+  &__button {
+    margin-left: 110px;
+    @include media("<=desktop") {
+      margin-top: 30px;
+      margin-left: 0;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+
+    &-close {
+      display: none;
+      @include media("<=desktop") {
+        cursor: pointer;
+        display: inline-flex;
+        position: absolute;
+        top: 18px;
+        right: 18px;
+      }
+      svg {
+        fill: $charcoal-grey;
+        transition: $t-normal;
+        z-index: 10;
+        width: 19px;
+        height: 18px;
+        &:hover {
+          fill: $mango;
+        }
+      }
+    }
+
+    @include media("<=desktop") {
+      position: fixed;
+      flex-direction: column;
+      justify-content: center;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      visibility: hidden;
+      width: 100%;
+      height: 100%;
+      background: $c-white;
+      transition: $t-normal;
+      &.opened {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  @include media("<=tablet") {
+    .header__container {
+      height: 60px;
+    }
+  }
+
+  &--scrolled {
+    background: $c-white;
+    border-bottom: 1px solid $pale-grey-two;
+    .header__container {
+      padding: 10px 80px;
+    }
+  }
+
+  &--logged {
+    width: 100%;
+    background-color: $c-white;
+    transition: box-shadow $t-normal;
+    transition: border $t-normal;
+    border-bottom: 2px solid #e3edf5;
+
+    .header__container {
+      height: 68px;
+      padding: 2px 15px 0;
+      @include media("<=desktop") {
+        height: 60px;
+      }
+    }
+  }
+
+  &--fake {
+    //border-bottom: none;
+    .header__container {
+      padding: 2px 15px;
+    }
+    .header__logo {
+      position: absolute;
+    }
+    .image-header {
+      width: 100%;
+      padding-top: 0%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .circular-image {
+        position: relative;
+        top: 30px;
+        width: 90px;
+        height: 94px;
+      }
+    }
+
+    @include media("<=phone") {
+      .header__logo {
+        top: 26px;
+        img{
+          width: 81px;
+        }
+      }
+      .image-header .circular-image {
+        top: 30px;
+        width: 60px;
+        height: 64px;
+      }
+    }
+  }
+
+  &--border{
+    border-bottom: 1px solid $pale-grey-two;
+  }
+
+  @include media("<=desktop") {
+    background: $c-white;
+    .header__container {
+      padding: 15px 15px;
+    }
+  }
+}
+
+// LOGIN MODAL
+.modal-login {
+  position: fixed;
+  width: 40%;
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0px 2px 54.4px 13.6px rgba(25, 25, 25, 0.2);
+  border-radius: 3px;
+
+  @include media("<=tablet") {
+    width: 60%;
+  }
+  @include media("<=phone") {
+    width: 100%;
+  }
+}

@@ -1,0 +1,134 @@
+@import 'variables';
+
+// import shine-frontend config
+@import 'settings/_fonts';
+@import 'settings/_forms';
+@import 'settings/_typography';
+@import 'settings/_layout';
+
+body {
+  margin: 0;
+}
+
+// includes from shine-frontend
+//------------------------------
+// => Includes
+//------------------------------
+/*
+@import 'includes/normalize';
+@import 'includes/bootstrap-grid';
+@import 'includes/slick';
+@import 'includes/slick.custom';
+@import 'includes/nice-select';
+@import 'includes/fastselect';
+@import 'includes/simplebar';
+*/
+
+
+/* Component Styles */
+
+/** body **/
+
+/*
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #222222;
+  background: #fff;
+  margin: 0;
+
+  height: 200%;
+  position: relative;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 0.85;
+  color: #222222;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+h3 {
+  font-size: 45px;
+}
+
+h4 {
+  font-size: 32px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+body, p, input, * {
+}
+
+*/
+
+/** links **/
+
+/*
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover{
+  color: $navy-blue;
+}
+
+*/
+
+/** alerts **/
+.alert,
+.error{
+  color: $white;
+  background-color: $color-alert;
+}
+
+.alert-inverse,
+.error-inverse {
+  color: #C7769A;
+  background-color: transparent;
+}
+
+/** Highlight **/
+.highlight {
+  color: $mango;
+}
+
+
+/** Transitions **/
+/*  With CSSTransitionGroup */
+
+.transition-opacity {
+
+  &-enter {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  &-enter-active {
+    opacity: 1;
+    transform: translate-X(0);
+    transition: opacity $t-normal 50ms, transform $t-normal 50ms;
+  }
+  &-exit {
+    opacity: 1;
+  }
+  &-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity $t-normal 200ms, transform $t-normal 200ms;
+  }
+}
+

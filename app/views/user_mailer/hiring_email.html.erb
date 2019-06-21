@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+
+  <body>
+    <p>Congratulations! <%= @parent.name %> would love to work with you. </p>
+
+    <p>
+      You are confirmed for lessons in <%= @hiring_request.subject %> at your rate of $<%= @hiring_request.hourly_rate %>/hour.
+    </p>
+
+    <p>
+      Their student <%= @parent.student_name %> is looking forward to working with you!
+    </p>
+
+    <p>
+      You are all set to begin lessons with the family. Just navigate to your <a href="<%= @lessons_url %>">Lessons Page</a> and click "New Lesson" to get started!
+    </p>
+
+    <p>
+      Happy Tutoring!
+    </p>
+
+    <p>The Shine Team</p>
+  </body>
+</html>
+

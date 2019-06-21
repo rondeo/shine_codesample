@@ -1,0 +1,41 @@
+.section-teachers {
+  position: relative;
+  background: $pale-grey;
+  overflow: hidden;
+  &__teachers {
+    margin-top: 60px;
+    @include media("<=tablet") {
+      margin-top: 60px;
+    }
+  }
+  &__bottom {
+    margin-top: 75px;
+    display: flex;
+    justify-content: center;
+  }
+  &__background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  &__icon {
+    transition: $t-parallax;
+    svg {
+      fill: rgba($mango-two, 0.56);
+      width: 600px;
+      height: 600px;
+    }
+    &--1 {
+      position: absolute;
+      top: -300px;
+      left: -150px;
+    }
+    &--2 {
+      position: absolute;
+      bottom: -100px;
+      right: -300px;
+    }
+  }
+}

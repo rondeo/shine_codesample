@@ -1,0 +1,9 @@
+.circular-image {
+  width: 124px;
+  height: 124px;
+  background-color: #ccc;
+  @include backgroundCoverCenter;
+  border-radius: 50%;
+  border: 1px solid #C7F3FB;
+  margin: 0 auto;
+}

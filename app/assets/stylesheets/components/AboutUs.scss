@@ -1,0 +1,61 @@
+.page-about-us {
+  padding-top: 76px;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  background-position: 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(
+    -90deg,
+    rgba(180, 20, 0, 0.09),
+    rgba(30, 10, 40, 0.45)
+    ),
+    url(/images/grad-student-small-1800.jpg);
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  color: $white;
+
+  .our-story {
+    .image {
+      width: 50%;
+    }
+    .description {
+      width: 50%;
+    }
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  section {
+    width: 50%;
+    padding: 1rem 0;
+  }
+
+  @include media("<=phone") {
+    background-size: contain;
+    background-position: top center;
+    background-image: url(/images/grad-student-small-1800.jpg);
+    background-repeat: no-repeat;
+    background-color: #555;
+
+    .our-story {
+      position: relative;
+      top: 177px;
+    }
+
+    .our-story .image,
+    .our-story .description,
+    section {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+
+}

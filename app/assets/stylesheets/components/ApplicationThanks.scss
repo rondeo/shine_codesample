@@ -1,0 +1,32 @@
+// section-thanks [styles]
+
+.section-thanks {
+  position: relative;
+  display: block;
+  text-align: center;
+  @include media("<=phone") {
+    padding: 30px 0;
+  }
+
+  &__content {
+    max-width: 710px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 240px;
+    background-color: $c-white;
+    padding: 80px 90px;
+    border: solid 1px $pale-grey-two;
+    box-shadow: $bs-paper;
+  }
+
+  &__button {
+    margin-top: 40px;
+    @include media("<=phone") {
+      margin-top: 15px;
+    }
+  }
+}

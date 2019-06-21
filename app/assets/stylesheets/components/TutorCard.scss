@@ -1,0 +1,149 @@
+// tutor-card [styles]
+
+.tutor-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 100px;
+  max-width: 400px;
+  border: none !important;
+
+  &__content {
+    border: 1px solid $pale-grey-two;
+  }
+
+  &__tutor {
+    margin-top: -100px;
+    padding-bottom: 25px;
+  }
+
+  &__name {
+    font-size: em(24);
+    font-weight: bold;
+    padding: 20px 0;
+  }
+
+  //------------------------------
+  // Head
+  //------------------------------
+
+  &__head {
+    background-color: $pale-grey-two;
+    height: 40px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: em(14);
+    @include media("<=laptop"){
+        padding: 0 10px;
+        font-size: em(12)
+    }
+
+    &-rating {
+      display: flex;
+      align-items: center;
+    }
+    &-reviews {
+      padding: 0 10px;
+      color: $bluey-grey;
+      border-right: 1px solid $bluey-grey;
+    }
+    &-expirience {
+      padding: 0 10px;
+
+      b{
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__inner-content {
+    padding: 33px 40px;
+    @include media("<=laptop") {
+      padding: 30px;
+    }
+    @include media("<=tablet") {
+      padding: 30px 15px;
+    }
+  }
+
+  &__text {
+    padding-bottom: 15px;
+    color: $bluey-grey;
+    font-size: em(14);
+  }
+
+  &__view-more {
+    display: block;
+    color: $pinkish-orange;
+    padding-bottom: 30px;
+    transition: $t-normal;
+    &:hover {
+      color: $charcoal-grey;
+    }
+  }
+
+  //------------------------------
+  // Education
+  //------------------------------
+  &__education {
+    padding-bottom: 23px;
+    &-items {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &-item {
+      display: inline-flex;
+      margin-bottom: 5px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &-text {
+      font-size: em(14);
+      text-align: left;
+      font-weight: 500;
+    }
+    &-icon {
+      display: inline-flex;
+      margin-right: 10px;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  //------------------------------
+  // Price
+  //------------------------------
+  &__price{
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: center;
+
+    &-dollar{
+      font-size: em(18);
+      margin-top: -5px;
+    }
+
+    &-number{
+      font-size: em(28);
+      font-weight: bold;
+    }
+
+    &-hour{
+      font-size: em(18);
+      color: $bluey-grey;
+      margin-top: 3px;
+    }
+  }
+
+  // Button
+  &__button{
+    font-size: em(14);
+  }
+}

@@ -1,0 +1,25 @@
+// add [styles]
+
+.add {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  // width: 117px;
+  min-width: 120px;
+
+  @include media("<=desktop") {
+    padding-right: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__text{
+    text-transform: uppercase;
+    color: $mango-two;
+    font-weight: bold;
+    display: inline;
+    font-size: em(15);
+  }
+}

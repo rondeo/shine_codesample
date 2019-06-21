@@ -1,0 +1,67 @@
+// tutor-card-price [styles]
+
+.tutor-card-price {
+  position: relative;
+  border: 1px solid $pale-grey-two;
+  padding-top: 25px;
+  background: $c-white;
+  width: 100%;
+  max-width: 380px;
+
+  &__tutor {
+    margin-bottom: 12px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 29px;
+  }
+
+  &__title{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    color: $bluey-grey;
+  }
+
+  &__tagline {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    color: $black;
+    font-size: 1rem;
+    padding-bottom: 15px;
+  }
+
+  &__text{
+    color: $bluey-grey;
+    margin-top: 10px;
+  }
+
+  &__stars {
+    margin-right: 15px;
+  }
+
+  &__rate {
+    letter-spacing: 0.5px;
+    width: 100%;
+    height: 100px;
+    background-color: $steel;
+    line-height: 1.5em;
+    color: $c-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-cost{
+      font-size: em(34);
+      padding-bottom: 5px;
+    }
+
+    &-text{
+      font-size: em(18);
+    }
+  }
+}

@@ -1,0 +1,58 @@
+
+// import shine-frontend variables
+@import 'settings/_variables.scss';
+@import 'settings/_media.scss';
+@import 'settings/_mixins.scss';
+
+// primary #FAF2AD  (lined paper)
+// secondary #C7F3FB (light blue) // #C773FB (royalish purple)
+// text #ADA667     (olive green)
+// accent #C7769A, #AD6F8B   (light and dark lavender)
+//
+// buttons?: #C7F38B (sea-ish green)
+
+$font-size-xs: 10px;
+$font-size-sm: 13px;
+$font-size-md: 16px;
+$font-size-lg: 24px;
+$font-size-xl: 48px;
+$font-size-xxl: 64px;
+
+$grey: #d9d9d9;
+$black: #222;
+$white: #fff;
+$navy-blue: #000080;
+
+/*
+$color-primary: #DAC020; // goldenrod
+//$color-secondary: #7ec0ee; //sky blue 2
+$color-secondary: #37D7E0; //winter sky
+$color-accent: #8D802A; //lime green
+*/
+
+$color-primary: #FAF2AD;  // legal yellow
+$color-primary--light: #FFFFdf;
+$color-primary--dark: #C6BF7D;
+$color-secondary: #C773FB; // royal purple
+$color-secondary--light: #FCA4FF;
+$color-secondary--dark: #9343C7;
+
+$color-accent: #C7768A; // light lavender
+$color-accent-dark: #AD6F8B;
+
+$color-legal: #FAF2AD;
+$color-postit: #FFFF59; // or #FFF107; (deeper yellows)
+
+/*
+$color-secondary: #C7F3FB; // light blue
+$color-secondary--light: #FBFFFF;
+$color-secondary--dark: #96C0C8;
+*/
+// for fun: https://material.io/color
+// good colors:
+// - #c77 (reddish tint)
+// - 
+
+$color-alert: #e74c3c;
+$color-success: #2ecc71;
+

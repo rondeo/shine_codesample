@@ -1,0 +1,55 @@
+// starts [styles]
+
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css");
+
+.stars {
+  position: relative;
+  min-width: 84px;
+
+  input {
+    display: none;
+  }
+
+  label {
+    float: right;
+    display: flex;
+    font-size: 0;
+    color: #ccc;
+  }
+
+  label:before {
+    content: "\f005";
+    font-family: FontAwesome;
+    font-size: em(20);
+  }
+
+  label:hover,
+  label:hover ~ label {
+    //color: $charcoal-grey;
+    //transition: 0.2s;
+  }
+
+  input:checked ~ label {
+    color: $yellow-orange;
+  }
+
+  input:checked ~ label:hover,
+  input:checked ~ label:hover ~ label {
+    //color: $charcoal-grey;
+    //transition: 0.2s;
+  }
+
+  .star-half {
+    position: relative;
+  }
+
+  .star-half:before {
+    position: absolute;
+    content: "\f089";
+    padding-right: 0;
+  }
+
+  &--disabled {
+    pointer-events: none;
+  }
+}

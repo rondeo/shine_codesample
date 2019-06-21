@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+
+  <body>
+    <p>Hi! You've received a new message from <%= @sender.name %> on Shine:</p>
+
+    <blockquote>
+      <p style="white-space: pre-line;">
+	<%= @msg %>
+      </p>
+    </blockquote>
+
+    <br />
+    <p>For your convenience, here's a link to <a href="<%= @messages_url %>">view your Messages</a>.</p>
+
+    <p>Happy Tutoring!</p>
+
+    <p>The Shine Tutors Team</p>
+  </body>
+</html>

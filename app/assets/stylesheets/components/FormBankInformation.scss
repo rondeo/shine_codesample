@@ -1,0 +1,22 @@
+// form-bank-information [styles]
+
+.form-bank-information {
+  position: relative;
+
+  &__wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    @include media("<desktop") {
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    font-weight: 300;
+    letter-spacing: 0.2px;
+  }
+}

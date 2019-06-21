@@ -1,0 +1,10 @@
+//------------------------------
+// Here can be font faces
+//------------------------------
+@font-face {
+  font-family: museo-sans, sans-serif;
+  //src: url("../fonts/museosans.woff2") format("woff2"), url("../fonts/museosans.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: fallback;
+}

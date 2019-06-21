@@ -1,0 +1,77 @@
+// tutor [styles]
+
+.tutor {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__image-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 3px;
+    width: 200px;
+    height: 200px;
+    border: 1px solid $pale-grey-two;
+    background-color: $c-white;
+    transition: all $t-normal;
+
+    @include media("<=laptop") {
+      width: 170px;
+      height: 170px;
+    }
+    @include media("<=tablet") {
+      width: 150px;
+      height: 150px;
+    }
+
+    &--clickable {
+      cursor: pointer;
+    }
+
+    &--hasError {
+      border: 2px solid $mango-two;
+    }
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    @include backgroundCoverCenter;
+  }
+
+  &__name {
+    font-size: em(24);
+    font-weight: 500;
+    margin-top: 10px;
+    @include media("<=laptop") {
+      font-size: em(22);
+    }
+    @include media("<=tablet") {
+      font-size: em(20);
+    }
+  }
+
+  &__text{
+    padding: 20px 20px 0 20px;
+    text-align: center;
+    color: $steel-two;
+    font-size: 0.9em;
+  }
+
+  &__icon{
+    display: inline;
+    margin-left: 10px;
+    cursor: pointer;
+
+    svg{
+      width: 14px;
+      height: 14px;
+      fill: $steel;
+    }
+  }
+}

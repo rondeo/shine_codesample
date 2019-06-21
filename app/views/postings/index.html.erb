@@ -1,0 +1,102 @@
+<div class="root bg-lined">
+  <div class="content content-wide">
+    <div class="paper paper-wide">
+      <div class="header">
+        <div class="header-left">
+          <h2>POSTINGS</h2>
+        </div>
+        <div class="header-right">
+          <p>
+            <%= @postings.count %> Postings total
+          </p>
+          <p>
+            <%= @postings.in_last_week.count %> in last week
+          </p>
+          <p>
+            <%= @postings.needs_recipients.count.length %> need recipients
+          </p>
+        </div>
+      </div>
+      <div class="postings">
+        <div class="posting">
+          <span>
+            Posted
+          </span>
+          <span>
+            Parent
+            & Student
+          </span>
+          <span>
+            ZIP
+          </span>
+          <span>
+            Start Date
+          </span>
+          <span>
+            Rate
+          </span>
+          <span>
+            Subject (Grade Level)
+          </span>
+          <span>
+            Tutor Note
+          </span>
+          <span>
+            Assigned To
+          </span>
+          <span>
+            New
+          </span>
+        </div>
+        <% @postings.each do |p| %>
+          <div class="posting">
+            <span>
+              <%= p.created_at.to_date %>
+            </span>
+            <span>
+              <%= p.parent_name %>
+              & <%= p.student_name || "Same" %>
+            </span>
+            <span>
+              <%= p.area %>
+            </span>
+            <span>
+              <%= p.start_date %>
+            </span>
+            <span>
+              $ <%= p.price_point %>
+            </span>
+            <span>
+              <%= p.subject %> - <%= p.subject_grade_level %>
+            </span>
+            <span>
+              <%= p.tutor_note %>
+            </span>
+            <span>
+              <%= p.recipients.count %> recipients
+              <ul>
+                <% p.recipients.each do |r| %>
+                  <li>
+                    <%= r.name %>
+                  </li>
+                <% end %>
+              </ul>
+            </span>
+            <span>
+              <form>
+                <%= select(
+                  :posting_recipient,
+                  :user_id,
+                  p.recommended_tutors.map {|u| [u.name, u.id]},
+                  { include_blank: true, },
+                  { multiple: true, },
+                ) %>
+              </form>
+              <button type="submit">Send</button>
+            </span>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

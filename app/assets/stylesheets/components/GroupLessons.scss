@@ -1,0 +1,34 @@
+// group-lessons [styles]
+
+.group-lessons {
+  position: relative;
+
+  &__lesson-item {
+    border-bottom: 1px solid  $pale-grey-two;
+    transition: $t-normal;
+    &:last-child {
+      border-bottom: 1px solid transparent;
+    }
+    &:hover {
+      border-bottom: 1px solid $steel-four;
+    }
+  }
+  @include media("<=desktop"){
+    .group-lessons__lesson-item {
+      &:nth-child(3) {
+        border-bottom: transparent;
+      }
+      &:nth-child(n+4) {
+        display: none;
+      }
+    }
+  }
+
+  &__wrapper{
+    height: scroll;
+
+    @include media("<screen"){
+      max-height: 419px;
+    }
+  }
+}

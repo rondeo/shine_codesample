@@ -1,0 +1,150 @@
+// section-lessons [styles]
+
+.section-lessons {
+  position: relative;
+  padding-top: 0px;
+  padding-bottom: 0px;
+
+  @include media("<=tablet") {
+    .simplebar-content {
+      padding: 0 !important;
+    }
+  }
+  @include media("<=tablet") {
+    // padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+
+    @include media("<=desktop") {
+      flex-direction: column;
+    }
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    // justify-content: stretch;
+    width: 33%;
+
+    @include media("<=screen") {
+      min-width: 260px;
+    }
+
+    @include media("<=desktop") {
+      width: 100%;
+    }
+  }
+  &__right {
+    width: 70%;
+    min-width: 600px;
+
+    @include media("<=desktop") {
+      padding-top: 15px;
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+  &__news {
+    flex: 1;
+    height: 100px;
+
+    @include media("<laptop"){
+      height: 124px;
+    }
+
+    @include media("<screen"){
+      height: 108px;
+    }
+
+    @include media("<=desktop") {
+      display: none;
+    }
+
+    &-wrapper{
+      // margin-bottom: 200px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background-color: $c-white;
+      border: 1px solid $pale-grey-two;
+      border-right: none;
+      border-top: none;
+    }
+  }
+  &__panel {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 64vh;
+
+    &--left {
+      height: calc(64vh - 00px); // account for size of Newsbox on L
+
+      & > * {
+        border-right-color: transparent;
+        @include media("<=desktop") {
+          border-right-color: $pale-grey-two;
+        }
+      }
+    }
+    &--right {
+      position: relative;
+
+      &--lessons-page {
+        height: calc(64vh + 100px);  // account for size of NewMessage box/News box on L
+      }
+
+      &:after{
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        width: 99%;
+        height: 100%;
+        bottom: 10px;
+        height: 70px;
+        background: linear-gradient(transparent 20%, $c-white 40%);
+
+        @include media("<desktop"){
+          background-image: none;
+        }
+      }
+
+      @include media("<=desktop") {
+        margin-top: 15px;
+      }
+
+      &__no-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 4rem 6rem;
+
+        font-size: 1.2rem;
+        font-weight: 300;
+        line-height: 1.4rem;
+      }
+    }
+  }
+  &__scroll {
+    position: relative;
+    max-height: 764px;
+    // overflow-y: auto;
+
+    @include hideScrollbar;
+
+    @include media("<screen"){
+      max-height: 664px;
+    }
+
+    @include media("<tablet"){
+      overflow-y: hidden;
+      max-height: none;
+    }
+  }
+}

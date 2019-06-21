@@ -1,0 +1,13 @@
+// feedbacks [styles]
+
+.group-feedback {
+  position: relative;
+
+  &__item {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+}

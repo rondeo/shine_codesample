@@ -1,0 +1,24 @@
+.form-availability {
+  .times {
+    .times__header-top {
+      .times__header-top--item {
+        font-size: 0.9rem;
+      }
+    }
+
+    .times__header-left {
+      .times__header-left--item {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .field-checkbox--reverse label {
+    padding: 0;
+    padding-left: 0;
+  }
+
+  .checkbox {
+    font-size: 2rem;
+  }
+}

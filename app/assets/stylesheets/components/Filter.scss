@@ -1,0 +1,47 @@
+// section-filter [styles]
+
+.section-filter {
+  position: relative;
+  background: $c-white;
+  display: flex;
+  align-items: center;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 3fr 3fr 1fr 2fr auto;
+    grid-gap: 10px;
+    height: 100%;
+    padding: 50px 0;
+    border-bottom: 1px solid $pale-grey-two;
+    @include media("<=laptop") {
+      padding: 30px 0;
+    }
+    @include media("<=screen") {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include media("<=phone") {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .filter__select{
+    border-radius: 5px;
+
+    input, select{
+      font-size: em(14);
+    }
+  }
+
+  .filter__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin-top: 10px;
+    @include media("<=screen") {
+      grid-column: 1 / span 4;
+      @include media("<=phone") {
+        grid-column: span 1;
+      }
+    }
+  }
+}

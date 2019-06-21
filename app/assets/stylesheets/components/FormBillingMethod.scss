@@ -1,0 +1,12 @@
+// form-billing-method [styles]
+
+.form-billing-method {
+  position: relative;
+
+  &__wrapper {
+
+    @include media("<desktop") {
+      margin: 0 auto;
+    }
+  }
+}

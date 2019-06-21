@@ -1,0 +1,44 @@
+// action [styles]
+
+.action {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  color: $steel-two;
+  cursor: pointer;
+
+  &__circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 32px;
+    height: 32px;
+    min-width: 30px;
+    margin-right: 12px;
+    border-radius: 50%;
+    background-color: $steel-two;
+
+    svg{
+      width: 12px;
+      height: 12px;
+      fill: $c-white;
+    }
+  }
+
+  &__text{
+    display: flex;
+    align-items: center;
+    font-size: em(15);
+  }
+
+  &--orange{
+    color: $orangish;
+
+    .action__circle{
+      background-color:  $orangish;
+    }
+  }
+}

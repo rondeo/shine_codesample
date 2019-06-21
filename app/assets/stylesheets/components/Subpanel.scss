@@ -1,0 +1,35 @@
+// subpanel [styles]
+
+.subpanel {
+  position: relative;
+  padding: 0 15px;
+
+  @include media("<=tablet") {
+    // padding: 0 15px;
+  }
+  &__content {
+    padding: 15px 0;
+  }
+  &__title{
+    border-bottom: solid 1px $pale-grey-two;
+    padding: 25px 0;
+    font-size: em(16);
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+
+    &-count{
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin-left: 10px;
+      background-color: $orangish;
+      font-size: em(16);
+      color: $c-white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+// pagination [styles]
+
+.pagination {
+  position: relative;
+  display: flex;
+  background-color: $c-white;
+
+  &__button{
+    width: 44px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid $pale-grey-two;
+    border-bottom: 1px solid $pale-grey-two;
+    border-left: 1px solid $pale-grey-two;
+    cursor: pointer;
+    transition: $t-normal;
+
+    &:hover{
+
+      svg{
+        fill: $c-orange;
+        transition: $t-normal;
+      }
+    }
+
+    &:first-child {
+      border-radius: 4px 0 0 4px;
+    }
+
+    &:last-child {
+      border-radius: 0 4px 4px 0;
+      border-right: 1px solid $pale-grey-two;
+    }
+
+    svg{
+      width: 15px;
+      height: 15px;
+      fill: $steel-two;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+<div class="root bg-lined">
+  <div class="content content-wide">
+    <div class="paper paper-wide">
+      <div class="header">
+        <div class="header-left">
+          <h2>Tutor Apps</h2>
+        </div>
+        <div class="header-right">
+          <p>
+            <%= @total %> Tutors in system
+          </p>
+          <p>
+            <%= @in_last_week %> in last week
+          </p>
+          <p>
+            <%= @unapproved.count %> need approval
+          </p>
+        </div>
+      </div>
+      <div class="postings">
+        <div class="posting">
+          <span>
+            Applied
+          </span>
+          <span>
+            Photo
+          </span>
+          <span>
+            Name
+          </span>
+          <span>
+            ZIP
+          </span>
+          <span>
+            YearsExp
+          </span>
+          <span>
+            Desired Rate
+          </span>
+          <span>
+            Subject (Grade Level)
+          </span>
+          <span>
+            Bio
+          </span>
+          <span>
+            DescTutoringStyle
+          </span>
+          <span>
+            Resume
+          </span>
+          <span>
+          </span>
+        </div>
+        <% @unapproved.each do |t| %>
+          <div class="posting">
+            <span>
+              <%= t.created_at.to_date %>
+            </span>
+            <span>
+              <img src="<%= t.image %>" />
+            </span>
+            <span>
+              <%= t.name %>
+            </span>
+            <span>
+              <%= t.zip %>
+            </span>
+            <span>
+              <%= t.years_exp || '-' %>
+            </span>
+            <span>
+              $ <%= t.hourly_rate %>
+            </span>
+            <span>
+              <% @s = t.subjects.first %>
+              <%= @s && @s.name %> - <%= @s && @s.grade_level %>
+            </span>
+            <span>
+              <%= t.bio %>
+            </span>
+            <span>
+              <%= t.desc_tutoring_style %>
+            </span>
+            <span>
+              <a href="<%= t.resume %>"><%= t.resume %></a>
+            </span>
+            <span>
+              <%= form_for(
+                t,
+                as: :user,
+                url: approve_user_path(t),
+                method: :post,
+                remote: true
+              ) do |f| %>
+                <%= f.submit "Approve ##{t.id}" %>
+              <% end %>
+            </span>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

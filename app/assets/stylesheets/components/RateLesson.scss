@@ -1,0 +1,92 @@
+.form-rate-lesson {
+  width: 105%;
+  margin: 0 auto;
+
+  &__header {
+    width: 100%;
+    padding-top: 16px;
+    margin-bottom: 16px;
+
+    h4 {
+      text-transform: uppercase;
+      color: #555;
+      font-weight: 400;
+      letter-spacing: 2.0px;
+      width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+  }
+
+  .form-information__field {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__tutor-image {
+    width: 64px;
+    height: 64px;
+    margin-right: 24px;
+  }
+
+  &__button-field {
+  }
+
+  &__button {
+    font-size: 28px;
+    line-height: 36px;
+    height: 100%;
+    margin: 0 auto;
+    height: 106px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-weight: 200;
+    letter-spacing: 0.4px;
+    color: $steel;
+
+    transition: all $t-normal;
+
+    &:hover {
+      color: $mango-two;
+      svg {
+        fill: $mango-two;
+      }
+    }
+
+    span {
+      cursor: pointer;
+      margin: 0 auto;
+      width: 156px;
+      font-size: 48px;
+    }
+    svg {
+      fill: $steel-two;
+    }
+
+    &--selected {
+      color: $mango-two;
+      svg {
+        fill: $mango-two;
+      }
+    }
+
+    &--disapprove {
+    }
+    &--approve {
+    }
+
+    @include media("<tablet") {
+      font-size: 84px;
+    }
+  }
+
+  .form-lesson__button {
+    padding-top: 0;
+  }
+}

@@ -1,0 +1,20 @@
+.page-search {
+  margin-top: 0px;
+  background: $c-white;
+
+  &__title {
+    width: 94%;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 23px;
+    text-align: center;
+    h1 {
+      font-size: 42px;
+    }
+
+    @include media("<=laptop") {
+      margin-top: 29px;
+      margin-bottom: 12px;
+    }
+  }
+}

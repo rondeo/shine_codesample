@@ -1,0 +1,141 @@
+// section-information [styles]
+
+.section-information {
+  position: relative;
+  width: 520px;
+  margin: 0 auto;
+
+  &__scrollAnchor {
+    position: relative;
+    top: -34px;
+  }
+
+  .container-fluid {
+    @include media("<=phone") {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  &__title {
+    border-bottom: 1px solid #efefef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+
+    .circular-image {
+      position: relative;
+      top: 45px;
+    }
+  }
+
+  &__content {
+    padding: 30px 30px;
+
+    &__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 24px 23px;
+
+      @include media("<=phone") {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  &__error {
+    margin-top: 12px;
+  }
+
+  &__block {
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @include media("<=tablet") {
+      margin-bottom: 30px;
+    }
+    @include media("<=phone") {
+      margin-bottom: 15px;
+    }
+  }
+
+  @include media("<=tablet") {
+    width: 100%;
+
+    margin-top: 0;
+    padding-top: 30px;
+    margin-top: 200px;
+  }
+  @include media("<=phone") {
+    width: 100%;
+
+    margin-top: 0;
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+
+  &__action-buttons {
+    width: 100%;
+    display: flex;
+
+    .button {
+      width: 100%;
+      border-radius: 0;
+      letter-spacing: 4px;
+      font-weight: 400;
+      text-transform: unset;
+      min-height: 60px;
+      font-size: 14px;
+      padding: 0;
+
+      &__text {
+        letter-spacing: 0.8px;
+      }
+    }
+
+    @include media("<=phone") {
+      .button {
+        &__text {
+          padding: 0 22px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.section-submit {
+  position: relative;
+  text-align: center;
+  padding: 0px 0 90px 0;
+  @include media("<=phone") {
+    padding: 30px 0;
+  }
+
+  &__content {
+    max-width: 710px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__button {
+    margin-top: 40px;
+    @include media("<=phone") {
+      margin-top: 15px;
+    }
+  }
+
+  &__tos {
+    padding: 12px 0;
+    width: 100%;
+    margin: 0 auto;
+    @include media("<=phone") {
+      width: 100%;
+    }
+  }
+}

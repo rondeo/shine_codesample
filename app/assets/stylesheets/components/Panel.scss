@@ -1,0 +1,229 @@
+// panel [styles]
+
+.panel {
+  position: relative;
+  background: $c-white;
+  border: solid 1px $pale-grey-two;
+  height: 100%;
+
+  transition: all $t-normal;
+
+  &__title {
+    font-size: 1.2em;
+    font-weight: 300;
+    border-bottom: 1px solid $pale-grey-two;
+    line-height: 1.3em;
+    width: 100%;
+
+    &--noBorder {
+      border-bottom: none;
+    }
+
+    &__header {
+      font-size: 1.0em;
+      font-weight: 200;
+      letter-spacing: 0.4px;
+      width: 100%;
+
+      display: flex;
+      justify-content: space-between;
+
+      &--bold {
+        font-weight: 400;
+        width: 100%;
+        text-transform: uppercase;
+        letter-spacing: 1.0px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        padding: 36px 0 12px;
+        font-size: 0.95rem;
+        color: #555;
+      }
+    }
+
+    &__subtitle{
+      padding-top: .4em;
+      color: $c-orange;
+      font-size: 0.8em;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      cursor: pointer;
+    }
+  }
+
+  &__title-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 10px 30px;
+    min-height: 75px;
+    line-height: 1em;
+
+    @include media("<=desktop") {
+      height: auto;
+      padding: 15px 15px;
+    }
+
+    &_text{
+      min-width: 200px;
+      width: 100%;
+      //margin: auto;
+      padding-top: 6px;
+
+      @include media("<desktop"){
+        max-width: 90px;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: column nowrap;
+
+    height: 100%;
+    overflow: auto;
+    padding: 30px 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+    max-width: 770px;
+
+    @include media("<phone") {
+      padding: 30px 15px;
+    }
+
+    &--reversed {
+      flex-flow: column-reverse nowrap;
+    }
+  }
+
+  &__button {
+    // position: absolute;
+    // right: 30px;
+    // top: 15px;
+    @include media("<=tablet") {
+      position: relative;
+      right: 0;
+      top: 0;
+      margin-top: 15px;
+    }
+  }
+
+  &--center {
+    .panel__title-content_text {
+      text-align: center;
+
+      .panel__title__header {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  &--without-content-padding {
+    .panel__content {
+      padding: 0;
+      max-width: 100%;
+    }
+  }
+
+  &--small {
+    .panel__title-content {
+      height: auto;
+      padding: 15px 30px;
+    }
+    .panel__content {
+      padding: 30px;
+    }
+  }
+  &--button {
+    @include media("<=tablet") {
+      .panel__title-content {
+        flex-direction: column;
+      }
+    }
+  }
+  &--with-action, &--button{
+    .panel__title-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &--without-mobile-border {
+    @include media("<=phone") {
+      border: none;
+    }
+  }
+
+  &--withoutBorder{
+    border-right: none;
+    border-bottom: none;
+  }
+
+  &--border-bottom{
+    border-bottom: none;
+  }
+
+  &__pagination{
+    position: absolute;
+    top: 22px;
+    right: 30px;
+
+    @include media("<desktop"){
+      position: relative;
+      display: flex;
+      justify-content: center;
+      padding-left: 55px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &--account-page{
+    .panel__title{
+      display: none;
+    }
+  }
+
+  &--account-page-subtitle{
+    .panel__content{
+      display: none;
+    }
+  }
+
+  &--text-left{
+    .panel__title-content_text{
+      margin-left: 0;
+    }
+  }
+
+  &--full-width{
+    .panel__title-content_text{
+      max-width: 100%;
+      padding-left: 2.3%;
+    }
+  }
+
+  &--no-overflow{
+    .panel__content {
+      overflow: visible;
+    }
+  }
+
+  &--boxshadow{
+    border: none;
+    box-shadow: $bs-paper;
+  }
+
+  &--noscroll {
+    .panel__content {
+      overflow: visible;
+    }
+  }
+}

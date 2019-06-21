@@ -1,0 +1,196 @@
+// select [styles]
+
+.select {
+  position: relative;
+  width: 100%;
+  // Nice select
+  border-radius: 3px;
+  border-color: $pinkish-grey;
+  font-size: em(15);
+  color: $steel;
+  font-weight: 300;
+  height: 48px;
+  line-height: 48px;
+  padding-left: 17px;
+  float: none;    // unset `nice-select` CSS
+
+  .list {
+    width: 100%;
+    left: 0%;
+    transition: $t-normal;
+    z-index: 10;
+
+    &.list__left {
+      width: 92%;
+      left: 8%;
+      right: 0;
+    }
+    &.list__right {
+      width: 92%;
+      left: 0;
+      right: 8%;
+    }
+  }
+  & > * {
+    border-radius: 0 !important;
+  }
+  &:after {
+    border-bottom: 3px solid $bluey-grey;
+    border-right: 3px solid $bluey-grey;
+    content: '';
+    display: block;
+    height: 8px;
+    width: 8px;
+    margin-top: -4px;
+    pointer-events: none;
+    position: absolute;
+    right: 14px;
+    top: 50%;
+  }
+
+  &--big {
+    border-radius: 0px;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 30px;
+  }
+
+  &--error {
+    border-color: $mango-two;
+    &::placeholder {
+      color: $mango-two;
+    }
+    .option.selected {
+      color: $mango-two;
+    }
+  }
+}
+
+.fstElement {
+  width: 100%;
+  border-radius: 3px;
+  border-color: $pinkish-grey;
+  transition: $t-normal;
+  min-height: 48px;
+  font-weight: 700;
+}
+.fstQueryInput {
+  font-size: em(14) !important;
+  height: 2.95em;
+  padding: 0 !important;
+  padding-bottom: 0.3em !important;
+}
+.fstResultItem {
+  font-size: em(14);
+  font-weight: 500;
+}
+
+.fstControls {
+  width: 100% !important;
+}
+
+.fstChoiceItem {
+  padding: 0 26px 0 13px;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  background: $duck-egg-blue;
+  border-color: $pale-grey-three;
+  font-size: em(14);
+  color: $charcoal-grey;
+}
+.fstResultItem {
+  transition: $t-normal;
+}
+.fstResultItem.fstSelected {
+  background: $duck-egg-blue;
+  border-color: $duck-egg-blue;
+  color: $charcoal-grey;
+}
+
+.fstResultItem.fstFocused {
+  background: $steel;
+  border-color: $steel;
+  color: $c-white;
+}
+
+.fstResults {
+  border-radius: 3px;
+  margin-top: 10px;
+}
+
+.fstMultipleMode.fstActive, .fstMultipleMode.fstActive .fstResults {
+  box-shadow: none;
+}
+
+.fstChoiceRemove {
+  position: absolute;
+  color: $cloudy-blue;
+  right: 0;
+  top: 0;
+  left: auto;
+  height: 30px;
+  line-height: 1em;
+  bottom: 0;
+  margin: auto 0;
+  transition: $t-normal;
+  &:hover {
+    color: $steel;
+  }
+}
+
+.fstResultsOpened {
+  border-color: $steel;
+}
+
+.nice-select {
+  .option.displayed {
+    padding-left: 12px; // unset nice-select CSS
+  }
+
+  .list {
+    max-height: 8.3rem;
+    overflow-y: scroll;
+
+    &--noMaxHeight {
+      max-height: none;
+      overflow-y: visible;
+      overflow-x: visible;
+      width: calc(100% + 2px);
+      left: -1px;
+    }
+
+    .option {
+    }
+
+    .option.selected {
+      font-weight: 400;
+    }
+  }
+}
+
+.option--hasChildren {
+  // add caret at end
+
+  //display: flex;
+  position: relative;
+
+  &:hover > .list,
+  &:focus > .list {
+    display: flex;
+    max-height: none;
+    overflow-y: visible;
+    overflow-x: visible;
+  }
+  > .list {
+    display: none;
+    left: 100%;
+    top: 0;
+    position: absolute;
+    margin-left: 0.48px;
+
+    .option {
+      background: #fff;
+    }
+  }
+}

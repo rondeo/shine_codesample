@@ -1,0 +1,50 @@
+// form-education [styles]
+
+.form-educations {
+  position: relative;
+
+  &__title {
+    padding: 30px 30px;
+  }
+
+  .form-container {
+    padding: 30px 30px;
+    grid-template-columns: 1fr 1fr;
+
+    @include media("<=phone") {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__action-buttons {
+    display: flex;
+    width: 100%;
+    margin-top: 32px;
+
+    .button {
+      width: 100%;
+      border-radius: 0;
+      letter-spacing: 4px;
+      font-weight: 400;
+      text-transform: unset;
+      min-height: 60px;
+      font-size: 14px;
+      padding: 0;
+
+      &__text {
+        letter-spacing: 0.8px;
+      }
+    }
+
+    @include media("<=phone") {
+      .button {
+        &__text {
+          padding: 0 22px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+// Created by Roman 2018-10-10

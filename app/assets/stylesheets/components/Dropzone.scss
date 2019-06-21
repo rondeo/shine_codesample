@@ -1,0 +1,37 @@
+// dropzone [styles]
+
+.dropzone {
+  position: relative;
+  border: 1px dashed $pale-grey-two;
+  padding: 15px;
+  cursor: pointer;
+
+  &-title{
+    padding-bottom: 10px;
+    font-size: em(15);
+  }
+
+    span{
+      color: $bluey-grey-two;
+    }
+
+  &-add{
+    padding-bottom: 5px;
+    color: $bluey-grey-two;
+    font-size: em(15);
+
+    svg{
+      width: 14px;
+      height: 14px;
+      fill: $yellow-orange;
+    }
+
+    span{
+      padding-left: 5px;
+    }
+  }
+
+  .dz-error-message, .dz-size, .dz-filename, .dz-success-mark, .dz-error-mark{
+    display: none;
+  }
+}

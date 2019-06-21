@@ -1,0 +1,55 @@
+// form-references [styles]
+
+.form-tutor-references {
+  position: relative;
+
+  .form-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 30px 30px;
+
+    @include media("<=phone") {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .input {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .reference-personal-note {
+    max-height: 86px;
+    padding: 12px 18px;
+  }
+
+  &__action-buttons {
+    display: flex;
+    width: 100%;
+    margin-top: 12px;
+
+    .button {
+      width: 100%;
+      border-radius: 0;
+      letter-spacing: 4px;
+      font-weight: 400;
+      text-transform: unset;
+      min-height: 60px;
+      font-size: 14px;
+      padding: 0;
+
+      &__text {
+        letter-spacing: 0.8px;
+      }
+    }
+
+    @include media("<=phone") {
+      .button {
+        &__text {
+          padding: 0 22px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+// Created by Roman 2018-10-10

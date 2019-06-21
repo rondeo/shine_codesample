@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+
+  <body>
+    <p>Dear <%= @parent.name %>,</p>
+    <p>
+      We've recently observed that one of your charges for your lesson with <%= @tutor.name %> failed due to an out of date credit card. Don't worry, <%= @tutor.name %> has been paid -- but to allow them to keep getting paid for future lessons, please update your card details with Shine now:
+    </p>
+    <p>
+      <a href="<%= @parent_account_page_url %>">Here</a>'s a link for your convenience: <a href="<%= @parent_account_page_url %>">Update My Credit Card</a>
+    </p>
+
+    <p>Thank You and Happy Tutoring!</p>
+    <p>The Shine Tutors Team</p>
+  </body>
+</html>

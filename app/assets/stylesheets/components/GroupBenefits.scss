@@ -1,0 +1,28 @@
+// benefits [styles]
+
+.group-benefits {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+  @include media("<=desktop") {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 60px 15px;
+  }
+  @include media("<=tablet") {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @include media("<=phone") {
+    grid-template-columns: 1fr;
+  }
+  & > * {
+    &:nth-child(3) {
+      @include media("<=desktop") {
+        //grid-column: 1 / span 2;
+      }
+      @include media("<=tablet") {
+        //grid-column: 1;
+      }
+    }
+  }
+}

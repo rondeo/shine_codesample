@@ -1,0 +1,87 @@
+.guided-search-option {
+  min-height: 36px;
+  min-width: 156px;
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  border: 1px solid $mango;
+  background-color: $mango-transparent;
+  color: $mango-two;
+  padding-left: 9px;
+
+  cursor: pointer;
+  transition: all $t-normal;
+
+  &:hover {
+    border: 1px solid $mango-two;
+    background: $pale;
+
+    .guided-search-option__label-wrapper {
+      border: 1px solid $mango-two;
+    }
+    .guided-search-option__label {
+      color: 1px solid $mango-two;
+    }
+    .guided-search-option__title {
+      //color: 1px solid $mango-two;
+    }
+  }
+
+  @include media("<=phone") {
+    padding-left: 6px;
+  }
+
+  &__label {
+    position: relative;
+    font-weight: 500;
+    line-height: .95rem;
+    font-size: .87rem;
+
+    &-wrapper {
+      min-height: 24px;
+      min-width: 24px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin-right: 12px;
+      border: 1px solid $mango;
+      background: $c-white;
+    }
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: .9rem;
+    letter-spacing: 0.1px;
+  }
+
+  &--grey {
+    background: #fefefe;
+    color: $bluey-grey;
+    border: 1px solid #ddd;
+    transition: all $t-normal;
+
+    &:hover {
+      border: 1px solid $mango;
+      background: $mango-transparent;
+      color: $mango-two;
+    }
+
+    .guided-search-option__label {
+    }
+    .guided-search-option__label-wrapper {
+      border: 1px solid #ddd;
+
+      &:hover {
+        border: 1px solid $mango;
+      }
+    }
+    .guided-search-option__title {
+    }
+  }
+}

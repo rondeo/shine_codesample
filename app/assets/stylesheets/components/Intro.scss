@@ -1,0 +1,160 @@
+
+.shineLanding {
+  .section-intro {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: calc(105vh - 70px);
+    min-height: 500px;
+    background-position: center 80.0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #efefef;
+
+    .bg-img {
+      position: absolute;
+      width: 100%;
+      z-index: 0;
+    }
+
+    @include media("<=tablet") {
+      width: 100%;
+      height: calc(103vh);
+    }
+
+    // provide background image within media query to avoid double-loading
+    // - https://timkadlec.com/2012/04/media-query-asset-downloading-results/
+    @include media(">phone") {
+      background-image: linear-gradient(to right, rgba(0,0,0,0) 0, rgba(0,0,0,.00) 100%), // grey layer
+        url(/images/landing-header-1600-lossy.jpg);
+    }
+    @include media("<=phone") {
+      height: calc(100vh - 60px);
+      background-position: center bottom;
+      background-size: contain;
+      background-color: #e5e5e5;
+      background-image: url(/images/landing-header-tall-600-lossy.jpg);
+
+      width: 100%;
+      opacity: 1;
+    }
+
+    &__content {
+      z-index: 1;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 5.8%;
+      width: 60%;
+
+      @include media("<=screen") {
+        width: 90%;
+        position: relative;
+        top: 9%;
+      }
+      @include media("<=tablet") {
+        width: 80%;
+        position: relative;
+        top: 10%;
+      }
+      @include media("<=phone") {
+        width: 100%;
+        margin-top: 12%;
+        position: relative;
+        top: 0;
+      }
+
+      &__button {
+        margin-top: 42px;
+        border-radius: 6px;
+        min-height: 54px;
+
+        .button__text {
+          font-size: 17px;
+          letter-spacing: 1.2px;
+          font-weight: 500;
+          width: 100%;
+        }
+
+        @include media("<=phone") {
+          &.button {
+            margin: 0 auto;
+          }
+        }
+      }
+
+      &--left {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+
+        h1, h2, p {
+          line-height: 1.6em;
+        }
+        h1 {
+          font-weight: 500;
+          font-size: 3.6rem;
+        }
+
+        h2 {
+          font-size: 1.4rem;
+          font-weight: 300;
+          letter-spacing: 0.5px;
+        }
+
+        p {
+          font-size: 17px;
+          font-weight: 200;
+        }
+
+        @include media("<=phone") {
+          text-align: center;
+          width: 80%;
+          margin: 0 auto;
+          margin-top: 6%;
+
+          h1 {
+            font-size: 2.6rem;
+          }
+          h2 {
+          }
+        }
+      }
+      &--right {
+        //width: 65%;
+        width: 100%;
+        //max-width: 40%;
+        margin: 0 auto;
+        box-shadow: 0px 4px 9px 3px rgba(0, 0, 0, 0.1);
+        height: 100%;
+        min-height: 290px;
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+
+        background: #fafafa;
+        opacity: .99;
+
+        z-index: 10;
+
+        &:focus {
+          outline: none;
+        }
+
+        @include media("<=tablet") {
+          height: 100vh;
+        }
+        @include media("<=phone") {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

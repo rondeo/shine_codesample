@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+
+  <body>
+    <h1>Congrats! We've reviewed your tutor profile and would love to welcome you to Shine.</h1>
+
+    <p>To get started, please complete the following steps:</p>
+    <p>
+      <blockquote>
+        <ul>
+          <li>Step 1: <a href="<%= edit_api_v1_user_password_url(reset_password_token: @token, redirect_url: @redirect_url) %>">Click here</a> to choose your password</li>
+          <li>
+            Step 2: Set your Profile Picture, Tagline, and Rate: <a href="<%= @tutor_account_page_url %>">My Account</a>
+          </li>
+          <li>
+            Step 3: Set up your account with Stripe to receive payments from parents: <a href="<%= @tutor_account_page_url %>">Just click the banner on your Account page</a>
+          </li>
+          <li>
+            Step 4: That's it - you're ready to go Live!
+          </li>
+        </ul>
+      </blockquote>
+    </p>
+
+    <p>Once the above steps are complete, your account will automatically be activated and you'll start receiving inquiries from parents. Whenever a parent is interested in working with you, you'll get a message right here in your email.</p>
+
+    <p>If you have any questions, please shoot us an email at <a href="mailto:hi@shinetutors.co">hi@shinetutors.co</a>.</p>
+
+    <p>Welcome to the family, and happy tutoring!</p>
+
+    <p>The Shine Tutors Team</p>
+  </body>
+</html>

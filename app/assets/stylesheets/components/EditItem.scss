@@ -1,0 +1,32 @@
+// edit-item [styles]
+
+.edit-item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-left: 3px solid transparent;
+  cursor: pointer;
+
+  &__icon{
+    display: flex;
+    align-items: center;
+    // pointer-events: none;
+
+    svg{
+      width: 14px;
+      height: 14px;
+      fill: $steel-two;
+    }
+  }
+
+  &--active{
+    background-color: $c-white;
+    border-left: 3px solid $mango;
+  }
+
+  &:hover{
+    background-color: $c-white;
+    border-left: 3px solid $mango;
+  }
+}

@@ -1,0 +1,27 @@
+// navbar [styles]
+
+.navbar {
+  position: relative;
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  &__link {
+    display: inline-block;
+    color: $charcoal-grey;
+    padding: 17px;
+    border-bottom: 1px solid transparent;
+    transition: border $t-normal;
+    &:hover {
+      border-bottom: 1px solid $charcoal-grey;
+      color: $charcoal-grey;
+    }
+  }
+  @include media("<=desktop") {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+// Created by dimasion 2018-10-4

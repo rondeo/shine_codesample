@@ -1,0 +1,101 @@
+// checkbox [styles]
+
+.checkbox {
+  position: relative;
+  cursor: pointer;
+
+  &.custom-checkbox-slider {
+    position: relative;
+    margin-right: 36px;
+
+    &:checked {
+      &::before {
+        transform:translateX(100%);
+      }
+      &::after {
+        background: $mango;
+      }
+    }
+    &::after,
+    &::before {
+      content: '';
+      top:-2px;
+      left:-2px;
+      position: absolute;
+      transition: all 0.3s ease-in-out;
+    }
+    &::after {
+      background: $steel-two;
+      width:40px;
+      height:22px;
+      border-radius:10px;
+      outline: none;
+    }
+    &::before {
+      width:18px;
+      height:18px;
+      left:0px;
+      top:0px;
+      border-radius:50%;
+      background: $c-white;
+      z-index:1;
+      outline: none;
+    }
+  }
+}
+
+// hide default inputs, unless slider mode
+.checkbox:not(.custom-checkbox-slider) {
+  display: none;
+}
+.checkbox.custom-checkbox-slider ~ .replace-checkbox {
+  display: none;
+}
+
+// style replacement-checkbox
+.checkbox ~ .replace-checkbox {
+  display: inline-block;
+  position: relative;
+  background-color: $c-white;
+  border: 1px solid $steel;
+  border-radius: 2px;
+  cursor: pointer;
+
+  height: 21px;
+  width: 21px;
+
+  &--error {
+    border: 1px solid $mango;
+    box-shadow: 0 0 5px 3px $mango-two;
+    border-radius: 33%;
+  }
+
+}
+
+// style replacement checkbox, when checked mode
+.checkbox:checked ~ .replace-checkbox {
+  background: $mango-two;
+  border: 1px solid $mango;
+
+  &:after {
+    display: block;
+  }
+}
+
+// style checkmark
+.replace-checkbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+
+  left: 7.4px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid $c-white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+

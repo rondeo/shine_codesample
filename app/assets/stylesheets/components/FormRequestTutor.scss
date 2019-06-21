@@ -1,0 +1,32 @@
+// modal-request [styles]
+
+.form-request {
+  position: relative;
+  width: 100%;
+  @include media('<=desktop'){
+    min-width: 300px;;
+  }
+
+  &__head {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include backgroundCoverCenter;
+    &-text {
+      color: $c-white;
+    }
+  }
+
+  &__wrapper{
+    display: grid;
+    grid-gap: 30px;
+    padding: 30px;
+  }
+}
+.modal__button{
+  margin: auto;
+}

@@ -1,0 +1,25 @@
+.row {
+  padding-bottom: 1rem;
+  width: 100%;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.row-centered {
+  justify-content: center;
+}
+
+.row-flexStart {
+  justify-content: flex-start;
+}
+
+.row-flexEnd {
+  justify-content: flex-end;
+}
+
+.row-spaceEvenly {
+  justify-content: space-evenly;
+}

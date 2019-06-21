@@ -1,0 +1,22 @@
+// form-account-settings [styles]
+
+.form-account-settings {
+  position: relative;
+  padding-bottom: 10px;
+
+  &__submit {
+    margin-top: 30px;
+  }
+
+  .double-inline-field {
+    display: flex;
+
+    input {
+      margin-right: 14px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

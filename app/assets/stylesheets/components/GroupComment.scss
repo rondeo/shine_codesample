@@ -1,0 +1,19 @@
+// comments [styles]
+
+.group-comments {
+  position: relative;
+  /* the slides */
+  .slick-slide {
+    margin: 0px 0px;
+  }
+  /* the parent */
+  .slick-list {
+  }
+
+  .slick-track {
+    margin-left: 240px;
+    @include media("<=tablet") {
+      margin: 0px 0px;
+    }
+  }
+}

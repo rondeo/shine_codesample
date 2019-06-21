@@ -1,0 +1,63 @@
+// tutors [styles]
+
+.group-tutors {
+  position: relative;
+  margin: auto;
+  //grid-gap: 30px;
+  //grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  &__tutor {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
+    &__image {
+      width: 91px;
+      height: 91px;
+    }
+
+    &__name {
+      margin-top: 12px;
+      color: $warm-grey;
+      text-transform: uppercase;
+    }
+
+    &--selected {
+      .group-tutors__tutor__image {
+        border: 2px solid $mango-two;
+        padding: 4px;
+      }
+
+      .group-tutors__tutor__name {
+        color: #222;
+      }
+    }
+  }
+
+  @include media("<=laptop") {
+    grid-gap: 30px 15px;
+    & > * {
+      &:nth-child(even) {
+        //justify-self: start;
+      }
+      &:nth-child(odd) {
+        //justify-self: end;
+      }
+    }
+  }
+  @include media("<=screen") {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media("<=phone") {
+    grid-template-columns: repeat(1, 1fr);
+    & > * {
+      justify-self: center !important;
+    }
+  }
+}

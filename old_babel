@@ -1,0 +1,33 @@
+module.exports = function () {
+  const presets = [
+    [
+      "env",
+      {
+        "modules": false,
+        "targets": {
+          "browsers": "> 1%",
+          "uglify": true
+        },
+        "useBuiltIns": true
+      }
+    ],
+    "react",
+  ]
+
+  const plugins = [
+    "syntax-dynamic-import",
+    "transform-object-rest-spread",
+    "@babel/plugin-proposal-function-bind",
+    [
+      "transform-class-properties",
+      {
+        "spec": true
+      }
+    ]
+  ]
+
+  return {
+    presets,
+    plugins,
+  }
+}

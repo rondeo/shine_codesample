@@ -1,0 +1,180 @@
+.page-application {
+  height: calc(100vh - 70px);
+  min-height: 700px;
+
+  background: #fff; //backup bg
+  background-size: cover;
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to top left, rgba(255,158,34,0) 55%, rgba(255,158,34,.17) 92%),  // mango layer
+    linear-gradient(to right, rgba(0,0,0,0) 0, rgba(0,0,0,.08) 33%), // grey layer
+    url(/images/application-header-1800.jpg);
+
+  position: relative;
+  width: 100%;
+
+  @include media("<=desktop") {
+    background-position: 17%;
+  }
+  @include media("<=phone") {
+    background-position: 30% 50%;
+    // more grey on mobile
+    background-image: linear-gradient(to top left, rgba(255,158,34,0) 55%, rgba(255,158,34,.17) 92%),  // mango layer
+      linear-gradient(to right, rgba(0,0,0,0) 0, rgba(0,0,0,.25) 33%), // grey layer
+      url(/images/application-header-1800.jpg);
+  }
+
+  &__wrapper {
+    height: 100%;
+    position: relative;
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  &__title {
+    position: relative;
+    left: 28%;
+    top: 100px;
+    padding: 0px 0 0px;
+    padding-bottom: 40px;
+
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+
+    color: $white;
+    text-align: center;
+
+    letter-spacing: 0.3px;
+
+    //height: 200px;
+
+    h1, h3, p {
+      margin-bottom: 24px;
+      line-height: 2.0em;
+      color: #fefefe;
+    }
+    h1 {
+      line-height: 1.4em;
+      font-size: 3.7rem;
+      font-weight: 400;
+      letter-spacing: 1.7px;
+      vertical-align: middle;
+      .expand {
+        font-size: 3.71rem;
+        letter-spacing: 1.7px;
+      }
+    }
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+    p {
+      font-size: 17px;
+      font-weight: 200;
+    }
+    ol, ul {
+      width: 40%;
+      margin: 0 auto;
+      li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+    }
+
+    &__button {
+      margin-top: 24px;
+      border-radius: 6px;
+      min-height: 54px;
+
+      .button__text {
+        font-size: 17px;
+        letter-spacing: 1.2px;
+        font-weight: 500;
+      }
+    }
+
+    @include media("<=phone") {
+      position: relative;
+      left: 0%;
+      padding-top: 5%;
+      width: 100%;
+
+      h1 {
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
+        font-size: 2.95rem;
+        .expand {
+          font-size: 2.96rem;
+        }
+      }
+      h3 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+  }
+
+  &__application {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40%;
+    margin: 0 auto;
+    min-height: 264px;
+  }
+
+  &__benefits {
+    padding-bottom: 72px;
+
+    background: #fff;
+    text-align: center;
+
+    @include media("<=desktop") {
+      padding-top: 60px;
+    }
+    @include media("<=phone") {
+      padding-top: 0px;
+    }
+  }
+
+  &__faq {
+    padding-top: 64px;
+    padding-bottom: 48px;
+
+    background: $pale-peach;
+  }
+
+  &__bottom-cta {
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+    background: #fff;
+    text-align: center;
+  }
+
+  &__benefits, &__faq, &__bottom-cta {
+    h2 {
+      text-align: center;
+      padding-bottom: 28px;
+    }
+    h3 {
+      font-size: 1.4rem;
+    }
+    h4 {
+      text-align: center;
+      padding-bottom: 16px;
+    }
+    p {
+      font-size: 1.05rem;
+      line-height: 1.4rem;
+    }
+  }
+}

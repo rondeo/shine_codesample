@@ -1,0 +1,50 @@
+AllCops:
+  Enabled: true
+  Exclude:
+    - bin/**/*
+    - db/**/*
+    - lib/templates/**/*
+    - lib/tasks_related/**/*
+    - spec/support/helpers/**/*
+    - app/controllers/devise_token_auth/**/*
+    - config/initializers/**/*
+    - vendor/**/*
+    - test/**/*
+    - spec/**/*
+    - lib/plugins/**/*
+    - 'node_modules/**/*'
+    - Gemfile
+
+Style/Documentation:
+  Description: 'Document classes and non-namespace modules.'
+  Enabled: false
+
+Style/MethodCalledOnDoEndBlock:
+  Enabled: true
+
+Style/CollectionMethods:
+  Enabled: true
+
+Metrics/LineLength:
+  Enabled: false
+  Description: 'Limit lines to 120 characters.'
+  Max: 120
+
+Metrics/MethodLength:
+  CountComments: false # count full line comments?
+  Max: 40
+
+Metrics/AbcSize:
+  Max: 40
+
+Metrics/PerceivedComplexity:
+  Max: 10
+  
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Rails/TimeZone:
+  Enabled: false
+
+Style/RegexpLiteral:
+  Enabled: false

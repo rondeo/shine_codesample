@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+
+  <body>
+    <h1>Dear <%= @tutor.first_name %>,</h1>
+
+    <p>
+      Your lesson with <%= @learner.name %> on <%= @lesson.lesson_date.strftime("%-m/%-d") %> was rejected by the parent.
+    </p>
+
+    <p>
+      If you believe this was done in error, please reach out to <%= @learner.name %> via <a href="<%= @messages_url %>">the Messages page</a> and ask to re-submit the lesson. They may have some important feedback for you.
+    </p>
+
+    <p>
+      If you believe this action was correct, no further action on your part is required. Please contact info@shinetutors.co if you need additional help resolving this matter.
+    </p>
+
+    <p>
+      For your convenience, your Lesson Report information is included below:
+    </p>
+
+    <p>
+      <blockquote>
+	Lesson Date: <%= @lesson.lesson_date.strftime("%B %-d, %Y") %><br/>
+	Lesson Subject: <%= @lesson.subject %><br/>
+	Lesson Length: <%= @lesson.duration_in_mins %><br/>
+	Lesson Summary:
+	<br />
+	<br />
+	<%= @lesson.summary %>
+      </blockquote>
+    </p>
+
+    <p>Happy Tutoring!</p>
+
+    <p>The Shine Tutors Team</p>
+  </body>
+</html>

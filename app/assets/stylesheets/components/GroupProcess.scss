@@ -1,0 +1,15 @@
+// processes [styles]
+
+.group-group-process {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px 30px;
+  height: 100%;
+
+  @include media("<=phone") {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Created by dimasion 2018-10-4

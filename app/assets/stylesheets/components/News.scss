@@ -1,0 +1,120 @@
+// news [styles]
+
+.news {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: $mango;
+  padding: 30px;
+  color: $c-white;
+
+  @include media("<=laptop") {
+    padding: 15px;
+  }
+
+  &__date{
+    background-color: $c-white;
+    border-radius: 15px;
+    color: $steel;
+    font-size: 0.9em;
+    padding: 5px 10px;
+  }
+
+
+  &__content {
+    width: 100%;
+  }
+  &__icon{
+    padding-left: 10px;
+
+    svg{
+      width: 17px;
+      height: 17px;
+    }
+  }
+
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+
+    &-left{
+      display: flex;
+
+      &-text{
+        padding-left: 10px;
+        font-size: em(13);
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &-right{
+      text-transform: uppercase;
+      font-size: em(12);
+    }
+  }
+
+  &-avatar{
+    display: flex;
+    width: 30px;
+    height: 20px;
+    justify-content: space-between;
+
+    &__wrapper{
+      display: flex;
+      padding-top: 15px;
+    }
+
+    &__text{
+      padding-left: 10px;
+    }
+  }
+
+  &-image{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    z-index: 21;
+
+    background-size: cover;
+
+    &-bg{
+      width: 20px;
+      height: 20px;
+      margin-left: -10px;
+      border-radius: 50%;
+      z-index: 20;
+    }
+  }
+
+  &__bottom{
+
+    &-title{
+      display: flex;
+      padding-bottom: 10px;
+      font-size: em(14);
+    }
+
+    &-text{
+      font-size: em(15);
+
+      a{
+        color: $c-white;
+      }
+    }
+  }
+
+  &--message-page{
+    max-height: 120px;
+
+    // @include media("<laptop"){
+    //   max-height: 157px;
+    // }
+
+    // @include media("<screen"){
+    //   max-height: 175px;
+    // }
+  }
+}

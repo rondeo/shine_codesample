@@ -1,0 +1,220 @@
+// history-item [styles]
+
+.history-item {
+  position: relative;
+
+  //------------------------------
+  // Top
+  //------------------------------
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media("<=phone") {
+      flex-direction: column;
+    }
+  }
+
+  // &__button {
+  //   @include media("<=laptop") {
+  //     margin-top: 15px;
+  //   }
+  // }
+
+  &__wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: 100%;
+
+    padding: 15px 15px;
+
+    &--buttons {
+      width: 100%;
+    }
+
+    @include media("<=tablet") {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    @include media("<=phone") {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+  &__content {
+    padding-left: 15px;
+    @include media("<=phone") {
+      padding: 0;
+    }
+  }
+  &__image {
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    @include backgroundCoverCenter;
+    @include media("<=phone") {
+      margin-bottom: 10px;
+    }
+  }
+  &__approved {
+    margin-right: .4rem;
+    width: 15%;
+
+    .button {
+      padding: 0 14px;
+      width: 100%;
+    }
+  }
+  &__duration {
+    width: 15%;
+    margin: 0 14px;
+    margin-left: auto;    // align right
+
+    .button {
+      padding: 0 14px;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    width: 18%;
+    font-size: em(15);
+    @include media("<=tablet") {
+      margin-right: 0px;
+    }
+  }
+
+  &__subtitle {
+    display: flex;
+    align-items: center;
+
+    width: 18%;
+    margin-left: 14px;
+
+    font-size: em(13);
+    color: $bluey-grey-two;
+
+    @include media("<=tablet") {
+      margin-top: 5px;
+      margin-left: 0;
+      // flex-direction: column;
+      // align-items: flex-start;
+    }
+
+    span {
+      padding: 0 15px;
+
+      @include media("<=tablet") {
+        // padding: 0;
+        // padding-top: 2px;
+        // border-left: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        // padding: 0 5px;
+        &:first-child {
+          padding-left: 0;
+          border: none;
+        }
+      }
+    }
+  }
+
+  &__text {
+    font-size: em(13);
+    color: $bluey-grey-two;
+    text-align: left;
+
+    width: 20%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+    @include media("<=phone"){
+      text-align: center;
+    }
+  }
+
+  //------------------------------
+  // Bottom
+  //------------------------------
+  &__bottom {
+    transition: height ease-in 120ms;
+  }
+
+  &__quote {
+    margin-top: 6px;
+    position: relative;
+    padding: 24px 20px;
+    background-color: $pale;
+    font-size: em(14);
+    border-radius: 3px;
+    color: #565656;
+
+    &-without-bg {
+      background-color: $c-white;
+      margin-bottom: 10px;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 20px;
+      border-width: 7px;
+      border-style: solid;
+      border-color: transparent transparent $steel-four transparent;
+      transform: translate(-50%, -100%);
+    }
+  }
+
+  &__attachments {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  &__attachment {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  &__attachment-link {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    svg {
+      width: 15px;
+      height: 15px;
+      fill: $bluey-grey-two;
+      transition: $t-normal;
+    }
+
+    span {
+      padding-left: 5px;
+      font-size: em(14);
+      color: $bluey-grey-two;
+      transition: $t-normal;
+    }
+
+    &:hover {
+      span {
+        color: $mango;
+      }
+      svg {
+        fill: $mango;
+      }
+    }
+  }
+
+  &__button {
+    @include media("<phone"){
+      margin-top: 15px;
+    }
+  }
+}

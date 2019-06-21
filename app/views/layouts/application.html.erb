@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <title>Shine - Find a Great Tutor Today!</title>
+    <%= csrf_meta_tags %>
+    <meta charset="utf-8"></meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"></meta>
+    <meta name="description" content="Find quality, affordable, private in-home tutors in your neighborhood! We search for the best tutors so you don't have to. Tell us what you are looking for - academic help, enrichment, or supplemental curriculum - and we will call you with a tutor match next day. We have over 1000 qualified tutors in our network, and it's our mission to help you find the perfect tutor for your learning."></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"></meta>
+    <!-- Google Verification Tag -->
+    <meta name="google-site-verification" content="UW7vgAdBkDNOeCKX1bqcO0qyKkbA_EbwuEL64kH32bY" />
+
+    <%# here's why our JS loading is set up this way: %>
+    <%# - good for speed: https://flaviocopes.com/javascript-async-defer/#just-tell-me-the-best-way %>
+    <%# - but we want to load out packs as soon as possible - until we can split out Landing/page CSS even further %>
+    <%= javascript_packs_with_chunks_tag 'application', defer: true %>
+    <%= javascript_include_tag  'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <script defer type="text/javascript" src="https://js.stripe.com/v3/"></script>
+    <script defer type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+
+  </head>
+
+  <body>
+    <% if notice || alert %>
+      <div class="flash">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      </div>
+    <% end %>
+
+    <%= yield %>
+
+  </body>
+
+  <footer>
+    <%= redux_store("store", props: {}) %>
+    <%= redux_store_hydration_data %>
+
+    <%# do not load heap/fullstory on dev/stg -- use URL since we run staging app with RAILS_ENV='production' %>
+    <% if ENV['HEROKU_URL'] && ENV['HEROKU_URL'] =~ /shinetutors.co/ %>
+      <script type="text/javascript">
+        window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+        heap.load("1556512282");
+      </script>
+      <script type="text/javascript">
+        window['_fs_debug'] = false;
+        window['_fs_host'] = 'fullstory.com';
+        window['_fs_org'] = 'JNG1K';
+        window['_fs_namespace'] = 'FS';
+        (function(m,n,e,t,l,o,g,y){
+          if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+          g=m[e]=function(a,b,s){g.q?g.q.push([a,b,s]):g._api(a,b,s);};g.q=[];
+          o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+          y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+          g.identify=function(i,v,s){g(l,{uid:i},s);if(v)g(l,v,s)};g.setUserVars=function(v,s){g(l,v,s)};g.event=function(i,v,s){g('event',{n:i,p:v},s)};
+          g.shutdown=function(){g("rec",!1)};g.restart=function(){g("rec",!0)};
+          g.consent=function(a){g("consent",!arguments.length||a)};
+          g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+          g.clearUserCookie=function(){};
+        })(window,document,window['_fs_namespace'],'script','user');
+      </script>
+    <% end %>
+
+    <%# custom fonts %>
+    <link rel="stylesheet" href="https://use.typekit.net/dal0nyc.css">
+    <%= stylesheet_link_tag     'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= Pack Tag loads CSS from components: https://github.com/rails/webpacker/blob/master/docs/css.md#link-styles-from-your-rails-views %>
+    <%#= - only if extract_css is turned on in webpacker.yml %>
+    <%= stylesheet_packs_with_chunks_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </footer>
+</html>

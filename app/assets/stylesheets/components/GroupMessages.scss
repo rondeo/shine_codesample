@@ -1,0 +1,30 @@
+// group-messages [styles]
+
+.group-messages {
+  position: relative;
+  height: 100%;
+
+  .message {
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin-bottom: 5px;
+    }
+  }
+
+  @include media("<laptop") {
+    height: 431px;
+  }
+
+  @include media("<screen") {
+    height: 401px;
+  }
+
+  @include media("<1238px") {
+    height: 415px;
+  }
+
+  @include media("<1223px") {
+    height: 433px;
+  }
+}

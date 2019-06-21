@@ -1,0 +1,80 @@
+// teacher [styles]
+
+.teacher {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 370px;
+  height: 280px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+  background-color: $mango;
+  background-position: center 40%;
+  background-size: cover;
+
+  &__image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: $t-long;
+  }
+  &__info {
+    padding: 18px;
+    max-width: 246px;
+    text-align: right;
+    margin-bottom: 22px;
+  }
+  &__name {
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #111;
+    font-size: em(15);
+    font-weight: 600;
+  }
+  &__about {
+    font-size: em(12);
+    color: #222;
+    line-height: 1.3em;
+    font-style: italic;
+    padding-top: 4px;
+  }
+  &:hover {
+    .teacher__image {
+      transform: translateX(-10px);
+    }
+  }
+  &--flipped {
+    align-items: flex-start;
+    .teacher__info {
+      text-align: left;
+    }
+    .teacher__image {
+      left: auto;
+      right: 0;
+      &:hover {
+        transform: translateX(10px);
+      }
+    }
+  }
+  &--pale {
+    background-color: $pale;
+  }
+  &--mango {
+    background-color: $mango-two;
+  }
+  &--pale-peach-2 {
+    background-color: $pale-peach-two;
+  }
+  &--pale-peach {
+    background-color: $pale-peach;
+  }
+  &--orangish {
+    background-color: $orangish;
+  }
+}
+
+// Created by dimasion 2018-10-4

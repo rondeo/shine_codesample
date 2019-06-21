@@ -1,0 +1,20 @@
+// section-benefits [styles]
+
+.section-benefits {
+  position: relative;
+
+  .container-fluid {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  &__benefits {
+    margin-top: 24px;
+    @include media("<=screen") { margin-top: 100px; }
+    @include media("<=desktop") { margin-top: 70px; }
+    @include media("<=tablet") { margin-top: 60px; }
+    @include media("<=phone") { margin-top: 40px; }
+  }
+}
+
+// Created by dimasion 2018-10-4

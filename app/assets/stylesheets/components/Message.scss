@@ -1,0 +1,86 @@
+// message [styles]
+
+.message {
+  position: relative;
+
+  &__text{
+    width: 100%;
+    max-width: 61%;
+    border-radius: 6px 6px 6px 6px;
+    padding: 18px 21px;
+
+    color: $steel;
+    background-color: #F5F7FD;
+    font-size: .85rem;
+    line-height: 1.2rem;
+    letter-spacing: .2px;
+
+    word-wrap: break-word;
+    white-space: pre-line;
+
+    @include media("<phone"){
+      max-width: 94%;
+    }
+  }
+
+  &__date{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    width: 100%;
+
+    span {
+      color: $steel;
+      padding: 5px 10px;
+      border-radius: 15px;
+      background-color: $pale-grey-two;
+    }
+  }
+
+  &__image{
+    margin: 10px 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &--my{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .message__text{
+      background-color: $steel;
+      color: $c-white;
+    }
+  }
+  &--others {
+    // most covered in default .message properties
+  }
+
+  // border-radii for alternating messages
+  // - remove border-rad from one corner to show user origin
+  &--others:nth-child(odd) {
+    .message__text {
+      border-radius: 6px 6px 6px 2px;
+    }
+  }
+  &--others:nth-child(even) {
+    .message__text {
+      border-radius: 2px 6px 6px 6px;
+    }
+  }
+  &--my:nth-child(odd) {
+    .message__text {
+      border-radius: 6px 6px 2px 6px;
+    }
+  }
+  &--my:nth-child(even) {
+    .message__text {
+      border-radius: 6px 2px 6px 6px;
+    }
+  }
+}

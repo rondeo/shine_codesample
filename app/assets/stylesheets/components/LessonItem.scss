@@ -1,0 +1,90 @@
+// lesson-item [styles]
+
+.lesson-item {
+  position: relative;
+  padding: 12px 15px;
+  display: flex;
+  cursor: pointer;
+  // max-width: 400px;
+  transition: $t-normal;
+  width: 100%;
+
+  @include media("<=screen"){
+    padding: 10px;
+  }
+
+  &__img {
+    margin-right: 12px;
+  }
+  &__img-image{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: relative;
+
+    @include backgroundCoverCenter;
+
+    &-count{
+      position: absolute;
+      top: 0;
+      right: -10px;
+      width: 24px;
+      height: 24px;
+      background-color: #7D839D;
+      color: $c-white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: em(14);
+    }
+  }
+
+  &__content{
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    &-top{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 8px;
+      line-height: 1em;
+      width: 100%;
+
+      &-title{
+        font-size: em(15);
+        font-weight: 400;
+        width: 70%;
+      }
+
+      &-lesson{
+        text-transform: uppercase;
+        color: $bluey-grey-two;
+        font-size: em(14);
+        width: 30%;
+        text-align: center;
+      }
+    }
+
+    &-bottom{
+      color: $steel-five;
+      font-size: em(12);
+      line-height: 1.2em;
+      height: 1.2em;
+
+      width: 60%;
+      overflow: auto;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &:hover{
+    background-color: $steel-four;
+  }
+}

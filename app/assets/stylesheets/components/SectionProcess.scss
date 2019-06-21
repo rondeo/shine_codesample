@@ -1,0 +1,33 @@
+// section-process [styles]
+
+.section-process {
+  position: relative;
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 30px;
+    @include media("<=desktop") {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__title {
+    text-align: left;
+
+    @include media("<=phone") {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    color: $bluey-grey;
+    line-height: 1.75em;
+    font-weight: 300;
+    margin-top: 30px;
+    @include media("<=tablet") {
+      font-size: em(14);
+    }
+  }
+}
+
+// Created by dimasion 2018-10-4

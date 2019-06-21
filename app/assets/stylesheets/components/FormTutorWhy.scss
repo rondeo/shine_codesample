@@ -1,0 +1,22 @@
+.form-tutor-why {
+  .form-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    @include media("<=tablet") {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .form-container-col-2 {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    @include media("<=tablet") {
+      grid-template-columns: 1fr;
+    }
+    margin-bottom: 30px;
+  }
+}

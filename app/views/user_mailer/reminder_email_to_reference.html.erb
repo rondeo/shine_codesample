@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+
+  <body>
+    <h1>Hi, <%= @ref_name %>!</h1>
+
+    <p>A quick reminder that <%= @tutor.name %> has listed you as a reference on Shine!</p>
+
+    <p>
+      If you have a second to leave a quick note, your reference helps <%= @tutor.first_name %> receive twice the interest from new students.
+    </p>
+
+    <p>Of course, please leave only an honest and accurate reference for <%= @tutor.first_name %>!
+
+    <p>
+      Click <a href="<%= @profile_url %>">here</a> to leave a note of appreciation for <a href="<%= @profile_url %>"><%= @tutor.first_name %></a>.
+    </p>
+
+    <p>Thanks for helping <%= @tutor.first_name %> connect with more great students!</p>
+
+    <p>
+      Best,
+    </p>
+
+    <p>The Shine Tutors Team</p>
+  </body>
+</html>

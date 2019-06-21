@@ -1,0 +1,22 @@
+// benefits [styles]
+
+.group-benefits--tutor {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+
+  .benefit__text {
+    color: #222;
+    font-size: 0.9rem;
+  }
+
+  @include media("<=desktop") {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 45px 15px;
+  }
+  @include media("<=tablet") {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+}

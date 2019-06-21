@@ -1,0 +1,152 @@
+//------------------------------
+// Colors
+//------------------------------
+$c-white: #ffffff;
+$normal-black: #000000;
+$black: #363636;
+$c-black-3: #333333;
+
+$steel: #7d839e;
+$steel-two: #878f9a;
+$steel-three: #7d829d;
+$steel-four: #F6F7FC;
+$steel-five: #888888;
+
+$pale-peach: #ffe1a5;
+$pale-peach-two: #ffe0a2;
+$pale: #ffecc7;
+
+$mango: #ffb92c;
+$mango-transparent: rgba(255, 185, 44, .09);
+$mango-two: #ff9e2c;
+$c-orange: #ff802c;
+$orangish: #ff802c;
+$sun-yellow: #ffe233;
+$yellow-orange: #ffb800;
+
+$charcoal-grey: #3a4249;
+$charcoal-grey-two: #3c4044;
+$bluey-grey: #848ead;
+$bluey-grey-two: #99a9bf;
+$cool-grey: #9fa4af;
+$warm-grey: #979593;
+$pale-grey: #f8f9fc;
+$pale-grey-two: #e3edf5;
+$pale-grey-three: #e1eaf1;
+$c-brownish-grey-three: #666666;
+$greyish-brown: #555555;
+$dark-grey: #24262b;
+$c-button-grey: #eef0f6;
+$c-button-grey-two: rgba($warm-grey, .16);
+
+$very-light-pink: #fffefe;
+$pinkish-red: #ed1c24;
+$pinkish-grey: #cccccc;
+$pinkish-orange: #ff6644;
+$rusty-red: #DB2B39;
+
+$duck-egg-blue: #f5f7fd;
+$cloudy-blue: #c7d2e0;
+
+$white: #d5d5d5;
+$facebook: #3D5A96;
+$gmail: #F26C4F;
+$green: #36AF46;
+
+$bg: #ebe4e9;
+
+//------------------------------
+// Fonts
+//------------------------------
+$f-sans: sans-serif;
+
+//------------------------------
+// Box shadows
+//------------------------------
+$bs-low: 0px 0px 98px 0px rgba(0, 0, 0, 0.1);
+$bs-paper: 8px 11px 9px 1px rgba(0, 0, 0, 0.1);
+
+//------------------------------
+// transitions & Easing
+//------------------------------
+$easeInSine: cubic-bezier(0.47, 0, 0.745, 0.715);
+$easeOutSine: cubic-bezier(0.39, 0.575, 0.565, 1);
+$easeInOutSine: cubic-bezier(0.39, 0.575, 0.565, 1);
+
+$easeInQuad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+$easeOutQuad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$easeInOutQuad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+$easeInCubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$easeOutCubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+$easeInOutCubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+$easeInQuart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+$easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
+$easeInOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+$easeInQuint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+$easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
+$easeInOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
+
+$easeInExpo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$easeOutExpo: cubic-bezier(0.19, 1, 0.22, 1);
+$easeInOutExpo: cubic-bezier(1, 0, 0, 1);
+
+$easeInCirc: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+$easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
+$easeInOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+$easeInBack: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$easeInOutBack: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+$easeInOutFast: cubic-bezier(1,0,0,1);
+
+$authenticMotion: cubic-bezier(.4,0,.2,1);
+
+$t-parallax: 0.35s $easeOutExpo;
+$t-normal: .35s $authenticMotion;
+$t-long: 0.5s $easeInOutSine;
+
+//------------------------------
+// Font sizes
+//------------------------------
+$fs-base: 18;
+$fs-display-4: 112px;
+$fs-display-3: 56px;
+$fs-display-2: 45px;
+$fs-display-1: 34px;
+
+$fs-headline-1: 98px;
+$fs-headline-1-tablet: 60px;
+$fs-headline-1-phone: 60px;
+
+$fs-headline-2: 34px;
+$fs-headline-2-tablet: 24px;
+$fs-headline-2-phone: 20px;
+
+
+
+$fs-title: 20px;
+$fs-subheading: 16px;
+$fs-body-1: 14px;
+$fs-caption: 12px;
+
+//------------------------------
+// Media Breakpoints
+//------------------------------
+
+// Mobile first
+$screenMin: "screen and (min-width : 1200px)";
+$desktopMin: "screen and (min-width : 992px)";
+$tabletMin: "screen and (min-width : 768px)";
+$phoneMin: "screen and (min-width : 480px)";
+$iPhoneMin: "screen and (min-width : 0px)";
+
+// Desktop first method
+$screen: "screen and (max-width : 1200px)";
+$desktop: "screen and (max-width : 992px)";
+$tablet: "screen and (max-width : 768px)";
+$phone: "screen and (max-width : 480px)";
+$iPhone: "screen and (max-width : 320px)";

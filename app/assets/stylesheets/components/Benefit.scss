@@ -1,0 +1,60 @@
+// benefit [styles]
+
+.benefit {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 0 12.5%;
+  text-align: center;
+
+  &__icon {
+    width: 138px;
+    height: 108px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    @include media("<=tablet") {
+      margin-bottom: 30px;
+    }
+    svg {
+      width: 65px;
+      height: 65px;
+    }
+  }
+
+  &__text-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: em(20);
+    font-weight: 700;
+    margin-top: 12px;
+    margin-bottom: 18px;
+    max-width: 276px;
+    min-height: 2.3rem;
+    vertical-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    @include media("<=tablet") {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    color: $bluey-grey;
+    font-weight: 300;
+    font-size: em(15);
+    min-height: 4.5rem;
+  }
+}

@@ -1,0 +1,59 @@
+// form-review [styles]
+
+.form-review {
+  position: relative;
+  width: 100%;
+  display: flex;
+
+  &__left{
+    position: relative;
+    width: 300px;
+    height: 610px;
+
+    @include backgroundCoverCenter;
+
+    @include media("<tablet"){
+      display: none;
+    }
+  }
+
+  &__right{
+    padding: 30px 40px;
+    margin: auto;
+
+    &-title{
+      padding-bottom: 20px;
+    }
+
+    &-form{
+      &-span{
+        padding-bottom: 20px;
+      }
+    }
+
+    &-button{
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &-stars{
+    width: 101px;
+    padding-bottom: 20px;
+  }
+
+  &-fieldset{
+    padding-bottom: 20px;
+  }
+
+  &__radios {
+    display: flex;
+  }
+
+  &__radio {
+    margin-right: 15px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
